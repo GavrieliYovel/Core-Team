@@ -5,6 +5,16 @@
       "BoardName": "R&D",
       "Tasks": [
         {
+          "TaskId": "3",
+          "TaskName": "Implement",
+          "TaskDetails": "new details",
+          "Status": "new",
+          "Priority": "High",
+          "Type": "Feature",
+          "Assignee": "bril2010@gmail.com",
+          "Creator": "guy_123@jmail.com"
+        },
+        {
           "TaskId": 2,
           "TaskName": "Design",
           "TaskDetails": "Prepare a table using React",
@@ -92,6 +102,25 @@
       "BoardId": 4,
       "BoardName": "VikisBoard",
       "Tasks": []
+    },
+    {
+      "BoardId": 6,
+      "BoardName": "newNameForThisBoard",
+      "Tasks": [
+        {
+          "TaskId": 1,
+          "TaskName": "Saturday",
+          "TaskDetails": "blablabla",
+          "Status": "To-Do",
+          "Priority": "High",
+          "Type": "Bug",
+          "Assignee": "guy_123@jmail.com",
+          "Creator": "guy_123@jmail.com"
+        },
+        {
+          "TaskId": 2
+        }
+      ]
     },
     {
       "BoardId": 7,
