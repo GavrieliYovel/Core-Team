@@ -1,13 +1,11 @@
 const TaskManagerDAL = require('../taskManagerDAL');
 const {boardStatistics} = require('../boardStatistic');
 const {URL} = require('url');
-const logger = require('../Logger')
+const  boards_client=require('../client');
+const task_client = require('../taskclient');
+const Logger = require("../Logger");
+const logger = new Logger();
 const taskManagerDAL = new TaskManagerDAL();
-
-getId = (req, param) => {
-    const u = new URL(req.url, `http://${req.headers.host}`).searchParams.get(param);
-    return u;
-}
 
 error = (res) => {
     res.writeHeader(404);
@@ -15,31 +13,34 @@ error = (res) => {
     res.end();
 }
 
-module.exports = {
+exports.boardController = {
     errorHandler: (req, res) => {
         error(res);
     },
     renderHomePage: (req, res) => {
-        res.write(boards_client);
+        res.end(boards_client);
     },
     getTasksByBoard: (req, res) => {
-        const boardId =getId(req, 'boardId');
+        const boardId = req.params.id;
         const data = taskManagerDAL.getAllTaskByBoard(boardId);
         if (data == "error")
         {
             error(res);
             return;
         }
-        let dataAndStats = boardStatistics(boardId);
-        dataAndStats.tasks = data;
-        // logger.log(req);
+
         res.writeHeader(200);
-        res.end(JSON.stringify(dataAndStats));
-        //this.props.match.params.id
+        res.end(JSON.stringify(data));
+        // let dataAndStats = boardStatistics(boardId);
+        // dataAndStats.tasks = data;
+        // logger.log("getTasksByBoard");
+        // res.write(task_client);
+        // res.end(JSON.stringify(dataAndStats));
+
     },
-    showAllBoards: (req, res) => {
+    getBoards: (req, res) => {
         const data = taskManagerDAL.getAllBoards();
-        // logger.log(req);
+        logger.log("getBoards");
         res.writeHeader(200);
         res.end(JSON.stringify(data));
     },
@@ -48,13 +49,13 @@ module.exports = {
         let board;
 
         req
-            //.on('error', logger.log(err))
+            .on('error', logger.log(err))
             .on('data', chunk => body.push(chunk))
             .on('end', () => {
                 body = Buffer.concat(body).toString();
                 board = JSON.parse(body);
                 taskManagerDAL.updateBoard(board);
-                // logger.log(req);
+                logger.log("updateBoard");
                 res.end('done');
             })
     },
@@ -69,14 +70,14 @@ module.exports = {
                 body = Buffer.concat(body).toString();
                 board = JSON.parse(body);
                 taskManagerDAL.createNewBoard(board);
-                // logger.log(req);
+                logger.log("createNewBoard");
                 res.end('done');
             })
     },
     createNewTask: (req, res) => {
         let body = [];
         let task;
-        const boardId = getId(req, 'boardId');
+        const boardId = req.params.id;
 
         req
             .on('error', err => logger.log(err))
@@ -85,7 +86,7 @@ module.exports = {
                 body = Buffer.concat(body).toString();
                 task = JSON.parse(body);
                 taskManagerDAL.createNewTask(task,boardId);
-                // logger.log(req);
+                logger.log("createNewTask");
                 res.end('done');
             })
     },
@@ -100,7 +101,7 @@ module.exports = {
                 body = Buffer.concat(body).toString();
                 task = JSON.parse(body);
                 taskManagerDAL.updateTask(task);
-                // logger.log(req);
+                logger.log("updateTask");
                 res.end('done');
             })
     },
@@ -113,8 +114,12 @@ module.exports = {
             .on('end', () => {
                 body = Buffer.concat(body).toString();
                 ids = JSON.parse(body);
-                taskManagerDAL.deleteTask(ids);
-                // logger.log(req);
+                if(taskManagerDAL.deleteTask(ids) == "error") {
+                    // error(res);
+                    console.error('task not found');
+                    return;
+                }
+                logger.log("deleteTask");
                 res.end('done');
             })
         res.end('done');
@@ -130,7 +135,7 @@ module.exports = {
                 body = Buffer.concat(body).toString();
                 boardId = JSON.parse(body);
                 taskManagerDAL.deleteBoard(boardId);
-                // logger.log(req);
+                logger.log("deleteBoard");
                 res.end('done');
             })
     },
@@ -144,10 +149,19 @@ module.exports = {
                 body = Buffer.concat(body).toString();
                 task = JSON.parse(body);
                 res.writeHeader(200);
-                // logger.log(req);
+                logger.log("filterBoardByParameters");
                 res.end(JSON.stringify(taskManagerDAL.filterTasks(task)));
             })
+    },
+    exportBoardToCSV : (req , res)  => {
+        const boardId =getId(req, 'boardId');
+        const data = taskManagerDAL.exportToCsv(boardId);
+        logger.log("exportBoardToCSV");
+        if (data == "error")
+        {
+            error(res);
+            logger.log("bad request exportBoardToCSV");
+            return;
+        }
     }
 }
-
-// console.log(taskManagerDAL.getAllTaskByBoard(2));
