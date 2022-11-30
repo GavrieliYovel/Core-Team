@@ -1,7 +1,7 @@
-const TaskManagerDAL = require('./taskManagerDAL');
-const {boardStatistics} = require('./boardStatistic');
+const TaskManagerDAL = require('../taskManagerDAL');
+const {boardStatistics} = require('../boardStatistic');
 const {URL} = require('url');
-const logger = require('./Logger')
+const logger = require('../Logger')
 const taskManagerDAL = new TaskManagerDAL();
 
 getId = (req, param) => {
