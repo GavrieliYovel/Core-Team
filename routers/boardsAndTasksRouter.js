@@ -6,6 +6,7 @@ const boardRouter = new Router();
 //GET
 boardRouter.get('/boards', boardController.getBoards);
 boardRouter.get('/boards/:id', boardController.getTasksByBoard);
+boardRouter.get('/boards/:id/employees', boardController.getEmployeeByBoard);
 
 //POST
 boardRouter.post('/boards', boardController.createNewBoard);
