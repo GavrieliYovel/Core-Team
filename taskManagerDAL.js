@@ -110,7 +110,7 @@ module.exports = class TaskManagerDAL extends EventEmitter {
 
     deleteTask(payload) {
         if(this.data.Boards.find(board => board.BoardId == payload.BoardId) &&
-            this.data.Boards.find(board => board.BoardId == payload.BoardId).Tasks.find(task.TaskId == payload.TaskId)) {
+            this.data.Boards.find(board => board.BoardId == payload.BoardId).Tasks.find(task => task.TaskId == payload.TaskId)) {
             this.data.Boards.find(board => board.BoardId == payload.BoardId).Tasks = this.data.Boards.find(board => board.BoardId == payload.BoardId).Tasks.filter(task => task.TaskId != payload.TaskId);
             this.emit('updateData');
         }
@@ -125,18 +125,18 @@ module.exports = class TaskManagerDAL extends EventEmitter {
         this.emit('updateData');
     }
 
-    filterTasks(payload) {
-
-        if (this.data.Boards.find(board => board.BoardId == payload.BoardId)) {
+    filterTasks(payload, boardId) {
+        console.log(boardId);
+        if (this.data.Boards.find(board => board.BoardId == boardId)) {
             if (payload.hasOwnProperty('Priority'))
-                this.data.Boards.find(board => board.BoardId == payload.BoardId).Tasks = this.data.Boards.find(board => board.BoardId == payload.BoardId).Tasks.filter(task => task.Priority === payload.Priority);
+                this.data.Boards.find(board => board.BoardId == boardId).Tasks = this.data.Boards.find(board => board.BoardId == boardId).Tasks.filter(task => task.Priority === payload.Priority);
             if (payload.hasOwnProperty('Assignee'))
-                this.data.Boards.find(board => board.BoardId == payload.BoardId).Tasks = this.data.Boards.find(board => board.BoardId == payload.BoardId).Tasks.filter(task => task.Assignee === payload.Assignee);
+                this.data.Boards.find(board => board.BoardId == boardId).Tasks = this.data.Boards.find(board => board.BoardId == boardId).Tasks.filter(task => task.Assignee === payload.Assignee);
             if (payload.hasOwnProperty('Type'))
-                this.data.Boards.find(board => board.BoardId == payload.BoardId).Tasks = this.data.Boards.find(board => board.BoardId == payload.BoardId).Tasks.filter(task => task.Type === payload.Type);
+                this.data.Boards.find(board => board.BoardId == boardId).Tasks = this.data.Boards.find(board => board.BoardId == boardId).Tasks.filter(task => task.Type === payload.Type);
             if (payload.hasOwnProperty('Status'))
-                this.data.Boards.find(board => board.BoardId == payload.BoardId).Tasks = this.data.Boards.find(board => board.BoardId == payload.BoardId).Tasks.filter(task => task.Status === payload.Status);
-            return this.data.Boards.find(board => board.BoardId == payload.BoardId).Tasks;
+                this.data.Boards.find(board => board.BoardId == boardId).Tasks = this.data.Boards.find(board => board.BoardId == boardId).Tasks.filter(task => task.Status === payload.Status);
+            return this.data.Boards.find(board => board.BoardId == boardId).Tasks;
         } else {
             this.emit('error');
             return "error";
