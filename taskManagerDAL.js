@@ -172,4 +172,10 @@ module.exports = class TaskManagerDAL extends EventEmitter {
             return "error";
         }
     }
+
+    getEmployees(boardId) {
+        if(this.data.Boards.find(board => board.BoardId == boardId)) {
+            return this.data.Boards.find(board => board.BoardId == boardId).Employees;
+        }
+    }
 }
