@@ -94,5 +94,10 @@ exports.boardController = {
             logger.log("bad request exportBoardToCSV");
             return;
         }
+    },
+    getEmployeeByBoard: (req, res) => {
+        const data = taskManagerDAL.getEmployees(req.params.id);
+        console.log(data);
+        res.end(JSON.stringify(data));
     }
 }
