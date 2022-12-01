@@ -8,7 +8,10 @@ app.use(express.urlencoded({extended:true}));
 // app.use(logger("dev"));
 
 
+
 app.listen( port,()=>console.log('Express server is running on port',port)); // http.createServer(router).listen(3030);
 console.log('we created a server');
 
 app.use('/api', boardRouter);
+
+
