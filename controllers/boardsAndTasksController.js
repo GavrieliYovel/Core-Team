@@ -45,113 +45,44 @@ exports.boardController = {
         res.end(JSON.stringify(data));
     },
     updateBoard: (req, res) => {
-        let body = [];
-        let board;
-
-        req
-            .on('error', logger.log(err))
-            .on('data', chunk => body.push(chunk))
-            .on('end', () => {
-                body = Buffer.concat(body).toString();
-                board = JSON.parse(body);
-                taskManagerDAL.updateBoard(board);
-                logger.log("updateBoard");
-                res.end('done');
-            })
+        taskManagerDAL.updateBoard(req.body);
+        logger.log("updateBoard");
+        res.end('done');
     },
     createNewBoard: (req, res) => {
-        let body = [];
-        let board;
-
-        req
-            .on('error', err => logger.log(err))
-            .on('data', chunk => body.push(chunk))
-            .on('end', () => {
-                body = Buffer.concat(body).toString();
-                board = JSON.parse(body);
-                taskManagerDAL.createNewBoard(board);
-                logger.log("createNewBoard");
-                res.end('done');
-            })
+        taskManagerDAL.createNewBoard(req.body);
+        logger.log("createNewBoard");
+        res.end('done');
     },
     createNewTask: (req, res) => {
-        let body = [];
-        let task;
-        const boardId = req.params.id;
-
-        req
-            .on('error', err => logger.log(err))
-            .on('data', chunk => body.push(chunk))
-            .on('end', () => {
-                body = Buffer.concat(body).toString();
-                task = JSON.parse(body);
-                taskManagerDAL.createNewTask(task,boardId);
-                logger.log("createNewTask");
-                res.end('done');
-            })
+        taskManagerDAL.createNewTask(req.body);
+        logger.log("createNewTask");
+        res.end('done');
     },
     updateTask: (req, res) => {
-        let body = [];
-        let task;
+        taskManagerDAL.updateTask(req.body);
+        logger.log("updateTask");
+        res.end('done');
 
-        req
-            .on('error', err => logger.log(err))
-            .on('data', chunk => body.push(chunk))
-            .on('end', () => {
-                body = Buffer.concat(body).toString();
-                task = JSON.parse(body);
-                taskManagerDAL.updateTask(task);
-                logger.log("updateTask");
-                res.end('done');
-            })
     },
     deleteTask: (req, res) => {
-        let body = [];
-        let ids;
-        req
-            .on('error', err => logger.log(err))
-            .on('data', chunk => body.push(chunk))
-            .on('end', () => {
-                body = Buffer.concat(body).toString();
-                ids = JSON.parse(body);
-                if(taskManagerDAL.deleteTask(ids) == "error") {
-                    // error(res);
-                    console.error('task not found');
-                    return;
-                }
-                logger.log("deleteTask");
-                res.end('done');
-            })
+        if(taskManagerDAL.deleteTask(req.body) == "error") {
+            console.error('task not found');
+            return;
+        }
+        logger.log("deleteTask");
         res.end('done');
 
     },
     deleteBoard: (req, res) => {
-        let body = [];
-        let boardId;
-        req
-            .on('error', err => logger.log(err))
-            .on('data', chunk => body.push(chunk))
-            .on('end', () => {
-                body = Buffer.concat(body).toString();
-                boardId = JSON.parse(body);
-                taskManagerDAL.deleteBoard(boardId);
-                logger.log("deleteBoard");
-                res.end('done');
-            })
+        taskManagerDAL.deleteBoard(req.body);
+        logger.log("deleteBoard");
+        res.end('done');
+
     },
     filterBoardByParameters: (req, res) => {
-        let body = [];
-        let task;
-        req
-            .on('error', err => logger.log(err))
-            .on('data', chunk => body.push(chunk))
-            .on('end', () => {
-                body = Buffer.concat(body).toString();
-                task = JSON.parse(body);
-                res.writeHeader(200);
-                logger.log("filterBoardByParameters");
-                res.end(JSON.stringify(taskManagerDAL.filterTasks(task)));
-            })
+        const data =taskManagerDAL.filterTasks(req.body,  req.params.id);
+        res.end( JSON.stringify(data));
     },
     exportBoardToCSV : (req , res)  => {
         const boardId =getId(req, 'boardId');
