@@ -1,0 +1,27 @@
+<% for(var i = 0; i < boards.length;i++) { %>
+
+<!--    <td>-->
+<!--        <span class="custom-checkbox">-->
+<!--            <input type="checkbox" id="checkbox1" name="options[]" value="1">-->
+<!--            <label for="checkbox1"></label>-->
+<!--        </span>-->
+<!--    </td>-->
+    <tr>
+
+        <td role="button" data-href="/tasks"><%= boards[i].BoardId %></td>
+        <td role="button" data-href="/tasks"><%= boards[i].BoardName %></td>
+        <td>
+            <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
+            <a href="#deleteEmployeeModal"  class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
+        </td>
+<!--        <td>-->
+<!--            <a href="/update-user?id=<%= boards[i]._id%>" class="btn border-shadow update">-->
+<!--                <span class="text-gradient"><i class="fas fa-pencil-alt"></i></span>-->
+<!--            </a>-->
+<!--            <a class="btn border-shadow delete" data-id=<%= boards[i]._id%> >-->
+<!--                <span class="text-gradient"><i class="fas fa-times"></i></span>-->
+<!--            </a>-->
+<!--        </td>-->
+
+    </tr>
+<% } %>

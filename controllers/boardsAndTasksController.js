@@ -1,6 +1,8 @@
 const TaskManagerDAL = require('../taskManagerDAL');
 const {boardStatistics} = require('../boardStatistic');
 const {URL} = require('url');
+const axios = require('axios');
+const path = require('path');
 const  boards_client=require('../client');
 const task_client = require('../taskclient');
 const Logger = require("../Logger");
@@ -28,7 +30,8 @@ exports.boardController = {
             error(res);
             return;
         }
-
+        //res.render(ejs.render('../views/tasks.ejs'))
+        res.render('/tasks')
         res.writeHeader(200);
         res.end(JSON.stringify(data));
         // let dataAndStats = boardStatistics(boardId);
@@ -39,8 +42,11 @@ exports.boardController = {
 
     },
     getBoards: (req, res) => {
+
         const data = taskManagerDAL.getAllBoards();
+        //const databoards=JSON.stringify(data)
         logger.log("getBoards");
+        res.render("boards",{boards: data});
         res.writeHeader(200);
         res.end(JSON.stringify(data));
     },
