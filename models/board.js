@@ -1,5 +1,15 @@
 const {Schema, model} = require("mongoose");
 
+const taskSchema = new Schema({
+    TaskId: {type:Number, index:1},
+    TaskName: String,
+    TaskDetails: String,
+    Status: String,
+    Priority: String,
+    Type: String,
+    AssigneeId: Number ,
+    CreatorId: Number
+})
 const boardSchema = new Schema({
     BoardId : {type: Number, unique: 1, index:1},
     BoardName : String,
