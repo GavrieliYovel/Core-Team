@@ -47,10 +47,12 @@ module.exports = class TaskManagerDAL extends EventEmitter {
         this.setBoards([...this.data.Boards, payload]);
         this.emit('updateData');
     }
-
     getAllBoards() {
-        return this.data.Boards;
+        return
     }
+    // getAllBoards() {
+    //     return this.data.Boards;
+    // }
 
     getAllTaskByBoard(boardId) {
         if(this.data.Boards.find(board => board.BoardId == boardId)) {
