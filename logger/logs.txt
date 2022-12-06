@@ -1,0 +1,850 @@
+05-12-22 11:09 -> Getting all boards
+05-12-22 11:09 -> Getting all boards
+05-12-22 11:09 -> Getting all boards
+05-12-22 11:09 -> Getting all boards
+05-12-22 11:11 -> Getting all boards
+05-12-22 11:11 -> Get board by id
+05-12-22 11:49 -> Get board by id
+05-12-22 11:49 -> Get board by id
+05-12-22 11:50 -> Get board by id
+05-12-22 12:00 -> Getting all boards
+05-12-22 12:27 -> Getting all boards
+05-12-22 12:27 -> Getting all boards
+05-12-22 12:27 -> Getting all boards
+05-12-22 12:30 -> Error! boarder no 5 is not found!
+05-12-22 12:39 -> Error! boarder no 6 is not found!
+05-12-22 12:51 -> Getting all boards
+05-12-22 12:51 -> Getting all boards
+05-12-22 12:54 -> Error! boarder no 5 is not found!
+05-12-22 12:57 -> Getting all boards
+05-12-22 12:57 -> Getting all boards
+05-12-22 12:57 -> Error! boarder no undefined is not found!
+05-12-22 12:57 -> Getting all boards
+05-12-22 12:57 -> Error! boarder no undefined is not found!
+05-12-22 12:57 -> Getting all boards
+05-12-22 12:57 -> Error! boarder no undefined is not found!
+05-12-22 12:57 -> Getting all boards
+05-12-22 12:57 -> Error! boarder no undefined is not found!
+05-12-22 12:57 -> Getting all boards
+05-12-22 12:58 -> Error! boarder no undefined is not found!
+05-12-22 12:58 -> Getting all boards
+05-12-22 12:58 -> Getting all boards
+05-12-22 12:58 -> Error! boarder no undefined is not found!
+05-12-22 12:58 -> Getting all boards
+05-12-22 12:58 -> Getting all boards
+05-12-22 12:58 -> Error! boarder no undefined is not found!
+05-12-22 01:00 -> Getting all boards
+05-12-22 01:00 -> Error! boarder no undefined is not found!
+05-12-22 01:02 -> Error! boarder no undefined is not found!
+05-12-22 01:03 -> Error! boarder no undefined is not found!
+05-12-22 01:04 -> Getting all boards
+05-12-22 01:04 -> Getting all boards
+05-12-22 01:04 -> Getting all boards
+05-12-22 01:04 -> Getting all boards
+05-12-22 01:05 -> Getting all boards
+05-12-22 01:06 -> Getting all boards
+05-12-22 01:06 -> Getting all boards
+05-12-22 01:06 -> Getting all boards
+05-12-22 01:06 -> Getting all boards
+05-12-22 01:07 -> Getting all boards
+05-12-22 01:07 -> Getting all boards
+05-12-22 01:07 -> Getting all boards
+05-12-22 01:07 -> Getting all boards
+05-12-22 01:08 -> Getting all boards
+05-12-22 01:08 -> Getting all boards
+05-12-22 01:08 -> Error! boarder no undefined is not found!
+05-12-22 01:09 -> Getting all boards
+05-12-22 01:09 -> Getting all boards
+05-12-22 01:09 -> Getting all boards
+05-12-22 01:11 -> Getting all boards
+05-12-22 01:11 -> Getting all boards
+05-12-22 01:19 -> Getting all boards
+05-12-22 01:22 -> Getting all boards
+05-12-22 01:22 -> Getting all boards
+05-12-22 01:23 -> Getting all boards
+05-12-22 01:23 -> Getting all boards
+05-12-22 01:23 -> Getting all boards
+05-12-22 01:28 -> Getting all boards
+05-12-22 01:31 -> Getting all boards
+05-12-22 02:11 -> Getting all boards
+05-12-22 02:11 -> Getting all boards
+05-12-22 02:11 -> Getting all boards
+05-12-22 02:12 -> Getting all boards
+05-12-22 02:14 -> Getting all boards
+05-12-22 02:18 -> Getting all boards
+05-12-22 02:18 -> Getting all boards
+05-12-22 02:18 -> Getting all boards
+05-12-22 02:18 -> Error! boarder no undefined is not found!
+05-12-22 02:35 -> Getting all boards
+05-12-22 02:36 -> Getting all boards
+05-12-22 02:36 -> Getting all boards
+05-12-22 02:36 -> Getting all boards
+05-12-22 02:36 -> Getting all boards
+05-12-22 02:37 -> Getting all boards
+05-12-22 02:43 -> Getting all boards
+05-12-22 02:44 -> Getting all boards
+05-12-22 02:44 -> Error! boarder no undefined is not found!
+05-12-22 02:44 -> Error! boarder no undefined is not found!
+05-12-22 02:44 -> Getting all boards
+05-12-22 02:45 -> Getting all boards
+05-12-22 02:45 -> Error! boarder no undefined is not found!
+05-12-22 02:46 -> Getting all boards
+05-12-22 02:46 -> Getting all boards
+05-12-22 02:47 -> Error! boarder no undefined is not found!
+05-12-22 02:47 -> Error! boarder no undefined is not found!
+05-12-22 02:54 -> Error! boarder no undefined is not found!
+05-12-22 02:55 -> Getting all boards
+05-12-22 02:55 -> Error! boarder no undefined is not found!
+05-12-22 02:56 -> Error! boarder no undefined is not found!
+05-12-22 02:57 -> Getting all boards
+05-12-22 02:57 -> Error! boarder no undefined is not found!
+05-12-22 02:58 -> Getting all boards
+05-12-22 02:58 -> Error! boarder no undefined is not found!
+05-12-22 03:00 -> Getting all boards
+05-12-22 03:00 -> Getting all boards
+05-12-22 03:02 -> Getting all boards
+05-12-22 03:04 -> Getting all boards
+05-12-22 03:04 -> Error! boarder no undefined is not found!
+05-12-22 03:05 -> Error! boarder no undefined is not found!
+05-12-22 03:13 -> Getting all boards
+05-12-22 03:15 -> Getting all boards
+05-12-22 03:21 -> Getting all boards
+05-12-22 03:28 -> Getting all boards
+05-12-22 03:29 -> Getting all boards
+05-12-22 03:29 -> Getting all boards
+05-12-22 03:30 -> Getting all boards
+05-12-22 03:30 -> Getting all boards
+05-12-22 03:32 -> Getting all boards
+05-12-22 04:12 -> Getting all boards
+05-12-22 04:12 -> Getting all boards
+05-12-22 04:13 -> Getting all boards
+05-12-22 04:13 -> Getting all boards
+05-12-22 04:13 -> Getting all boards
+05-12-22 04:15 -> Getting all boards
+05-12-22 04:15 -> Getting all boards
+05-12-22 04:15 -> Getting all boards
+05-12-22 04:15 -> Getting all boards
+05-12-22 04:16 -> Getting all boards
+05-12-22 04:16 -> Getting all boards
+05-12-22 04:16 -> Getting all boards
+05-12-22 04:17 -> Getting all boards
+05-12-22 04:20 -> createNewBoard
+05-12-22 04:23 -> Getting all boards
+05-12-22 04:23 -> Getting all boards
+05-12-22 04:23 -> createNewBoard
+05-12-22 04:24 -> createNewBoard
+05-12-22 04:26 -> Getting all boards
+05-12-22 04:28 -> createNewBoard
+05-12-22 04:28 -> createNewBoard
+05-12-22 04:29 -> createNewBoard
+05-12-22 04:29 -> Getting all boards
+05-12-22 04:29 -> createNewBoard
+05-12-22 04:29 -> Getting all boards
+05-12-22 04:29 -> Getting all boards
+05-12-22 04:29 -> createNewBoard
+05-12-22 04:29 -> Getting all boards
+05-12-22 04:32 -> Getting all boards
+05-12-22 04:32 -> Getting all boards
+05-12-22 04:32 -> Error! boarder no undefined is not found!
+05-12-22 04:33 -> Error! boarder no undefined is not found!
+05-12-22 04:33 -> Error! boarder no undefined is not found!
+05-12-22 04:36 -> Getting all boards
+05-12-22 04:37 -> Getting all boards
+05-12-22 04:37 -> Getting all boards
+05-12-22 04:37 -> Getting all boards
+05-12-22 04:38 -> Getting all boards
+05-12-22 04:40 -> Getting all boards
+05-12-22 04:43 -> Getting all boards
+05-12-22 04:43 -> Getting all boards
+05-12-22 04:44 -> createNewBoard
+05-12-22 04:44 -> Getting all boards
+05-12-22 04:44 -> Getting all boards
+05-12-22 04:45 -> Getting all boards
+05-12-22 04:45 -> Getting all boards
+05-12-22 04:46 -> Getting all boards
+05-12-22 04:46 -> Getting all boards
+05-12-22 04:46 -> createNewBoard
+05-12-22 04:46 -> Getting all boards
+05-12-22 04:47 -> createNewBoard
+05-12-22 04:47 -> Getting all boards
+05-12-22 04:47 -> Getting all boards
+05-12-22 04:48 -> Error! boarder no undefined is not found!
+05-12-22 04:48 -> Error! boarder no undefined is not found!
+05-12-22 04:48 -> Error! boarder no undefined is not found!
+05-12-22 04:48 -> Getting all boards
+05-12-22 04:48 -> Getting all boards
+05-12-22 04:53 -> Getting all boards
+05-12-22 05:00 -> Getting all boards
+05-12-22 05:00 -> createNewBoard
+05-12-22 05:00 -> Getting all boards
+05-12-22 05:00 -> Getting all boards
+05-12-22 05:03 -> Getting all boards
+05-12-22 05:03 -> Getting all boards
+05-12-22 05:04 -> Getting all boards
+05-12-22 05:04 -> Error! boarder no undefined is not found!
+05-12-22 05:05 -> Error! boarder no undefined is not found!
+05-12-22 05:07 -> Getting all boards
+05-12-22 05:07 -> Error! boarder no undefined is not found!
+05-12-22 05:07 -> Getting all boards
+05-12-22 05:08 -> Error! boarder no undefined is not found!
+05-12-22 05:09 -> Getting all boards
+05-12-22 05:10 -> Getting all boards
+05-12-22 05:10 -> Getting all boards
+05-12-22 05:20 -> createNewBoard
+05-12-22 05:20 -> Getting all boards
+05-12-22 05:20 -> createNewBoard
+05-12-22 05:21 -> Getting all boards
+05-12-22 05:22 -> createNewBoard
+05-12-22 05:22 -> Getting all boards
+05-12-22 05:29 -> Getting all boards
+05-12-22 05:29 -> Getting all boards
+05-12-22 05:32 -> createNewBoard
+05-12-22 05:32 -> Getting all boards
+05-12-22 05:36 -> The board was not found by 8 id!
+05-12-22 05:37 -> The board was not found by 8 id!
+05-12-22 05:37 -> The board was not found by 9 id!
+05-12-22 05:39 -> Getting all boards
+05-12-22 05:39 -> Getting all boards
+05-12-22 05:40 -> createNewBoard
+05-12-22 05:40 -> createNewBoard
+05-12-22 05:40 -> createNewBoard
+05-12-22 05:40 -> createNewBoard
+05-12-22 05:40 -> Getting all boards
+05-12-22 05:41 -> The board was not found by 10 id!
+05-12-22 05:51 -> Getting all boards
+05-12-22 05:52 -> add a new board
+05-12-22 05:52 -> Getting all boards
+05-12-22 05:52 -> delete a board
+05-12-22 05:52 -> Error! boarder no 7 was not found!
+05-12-22 05:52 -> Getting all boards
+05-12-22 06:03 -> get board
+05-12-22 06:03 -> get board
+05-12-22 06:03 -> get board
+05-12-22 06:03 -> get board
+05-12-22 06:03 -> get board
+05-12-22 06:04 -> get board
+05-12-22 06:04 -> get board
+05-12-22 06:04 -> get board
+05-12-22 06:04 -> Getting all boards
+05-12-22 06:04 -> get board
+05-12-22 06:04 -> get board
+05-12-22 06:04 -> get board
+05-12-22 06:04 -> get board
+05-12-22 06:04 -> get board
+05-12-22 06:05 -> get board
+05-12-22 06:05 -> Getting all boards
+05-12-22 06:05 -> get board
+05-12-22 06:06 -> get board
+05-12-22 06:06 -> get board
+05-12-22 06:06 -> get board
+05-12-22 06:06 -> get board
+05-12-22 06:07 -> get board
+05-12-22 06:07 -> get board
+05-12-22 06:07 -> get board
+05-12-22 06:08 -> get board
+05-12-22 06:08 -> get board
+05-12-22 06:08 -> get board
+05-12-22 06:08 -> get board
+05-12-22 06:08 -> get board
+05-12-22 06:12 -> get board
+05-12-22 06:13 -> get board
+05-12-22 06:13 -> get board
+05-12-22 06:13 -> get board
+05-12-22 06:14 -> get board
+05-12-22 06:15 -> get board
+05-12-22 06:17 -> Getting all boards
+05-12-22 06:17 -> get board
+05-12-22 06:17 -> get board
+05-12-22 06:18 -> Getting all boards
+05-12-22 06:18 -> get board
+05-12-22 06:19 -> get board
+05-12-22 06:21 -> get board
+05-12-22 06:21 -> get board
+05-12-22 06:21 -> get board
+05-12-22 06:23 -> add a new board
+05-12-22 06:23 -> Getting all boards
+05-12-22 06:23 -> delete a board
+05-12-22 06:23 -> Error! boarder no 7 was not found!
+05-12-22 06:23 -> Getting all boards
+05-12-22 06:23 -> get board
+05-12-22 06:24 -> get board
+05-12-22 06:24 -> get board
+05-12-22 06:24 -> get board
+05-12-22 06:24 -> get board
+05-12-22 06:27 -> get board
+05-12-22 06:27 -> get board
+05-12-22 07:13 -> Getting all boards
+05-12-22 07:15 -> Getting all boards
+05-12-22 07:15 -> Getting all boards
+05-12-22 07:15 -> get board
+05-12-22 07:16 -> get board
+05-12-22 07:19 -> get board
+05-12-22 07:19 -> get board
+05-12-22 07:22 -> get board
+05-12-22 07:32 -> get board
+05-12-22 07:32 -> Getting all boards
+05-12-22 07:32 -> get board
+05-12-22 07:35 -> get board
+05-12-22 07:35 -> get board
+05-12-22 08:43 -> Getting all boards
+05-12-22 08:44 -> Getting all boards
+05-12-22 08:44 -> get board
+05-12-22 08:44 -> get board
+05-12-22 08:48 -> get board
+05-12-22 08:48 -> get board
+05-12-22 08:48 -> get board
+05-12-22 08:48 -> get board
+05-12-22 08:50 -> Getting all boards
+05-12-22 08:50 -> get board
+05-12-22 08:50 -> get board
+05-12-22 08:51 -> get board
+05-12-22 08:51 -> get board
+05-12-22 08:51 -> get board
+05-12-22 08:51 -> get board
+05-12-22 08:52 -> get board
+05-12-22 08:52 -> get board
+05-12-22 08:53 -> get board
+05-12-22 08:53 -> get board
+05-12-22 08:53 -> get board
+05-12-22 08:53 -> get board
+05-12-22 08:55 -> get board
+05-12-22 08:55 -> get board
+05-12-22 08:58 -> get board
+05-12-22 08:58 -> get board
+05-12-22 08:58 -> get board
+05-12-22 08:58 -> get board
+05-12-22 08:59 -> get board
+05-12-22 08:59 -> get board
+05-12-22 09:00 -> get board
+05-12-22 09:00 -> get board
+05-12-22 09:00 -> get board
+05-12-22 09:00 -> get board
+05-12-22 09:00 -> get board
+05-12-22 09:00 -> get board
+05-12-22 09:00 -> get board
+05-12-22 09:00 -> get board
+05-12-22 09:01 -> get board
+05-12-22 09:01 -> get board
+05-12-22 09:01 -> get board
+05-12-22 09:01 -> get board
+05-12-22 09:02 -> get board
+05-12-22 09:02 -> get board
+05-12-22 09:02 -> get board
+05-12-22 09:02 -> get board
+05-12-22 09:06 -> get board
+05-12-22 09:06 -> get board
+05-12-22 09:06 -> get board
+05-12-22 09:06 -> get board
+05-12-22 09:06 -> get board
+05-12-22 09:06 -> get board
+05-12-22 09:16 -> get board
+05-12-22 09:16 -> get board
+05-12-22 09:17 -> get board
+05-12-22 09:17 -> get board
+05-12-22 09:17 -> get board
+05-12-22 09:17 -> get board
+05-12-22 09:18 -> get board
+05-12-22 09:18 -> get board
+05-12-22 09:18 -> get board
+05-12-22 09:18 -> get board
+05-12-22 09:28 -> get board
+05-12-22 09:28 -> get board
+05-12-22 09:28 -> get board
+05-12-22 09:28 -> get board
+05-12-22 09:28 -> get board
+05-12-22 09:28 -> get board
+05-12-22 09:29 -> get board
+05-12-22 09:29 -> get board
+05-12-22 09:29 -> get board
+05-12-22 09:29 -> get board
+05-12-22 09:30 -> get board
+05-12-22 09:30 -> get board
+05-12-22 09:31 -> get board
+05-12-22 09:31 -> get board
+05-12-22 09:31 -> get board
+05-12-22 09:31 -> get board
+05-12-22 09:31 -> get board
+05-12-22 09:31 -> get board
+05-12-22 09:31 -> get board
+05-12-22 09:31 -> get board
+05-12-22 09:32 -> Getting all boards
+05-12-22 09:32 -> Getting all boards
+05-12-22 09:32 -> get board
+05-12-22 09:32 -> get board
+05-12-22 09:34 -> get board
+05-12-22 09:34 -> get board
+05-12-22 09:40 -> get board
+05-12-22 09:40 -> get board
+05-12-22 09:40 -> get board
+05-12-22 09:40 -> get board
+05-12-22 09:40 -> get board
+05-12-22 09:40 -> get board
+05-12-22 09:41 -> get board
+05-12-22 09:41 -> get board
+05-12-22 09:41 -> get board
+05-12-22 09:41 -> get board
+05-12-22 09:41 -> get board
+05-12-22 09:41 -> get board
+05-12-22 09:42 -> get board
+05-12-22 09:42 -> get board
+05-12-22 09:43 -> get board
+05-12-22 09:43 -> get board
+05-12-22 09:45 -> get board
+05-12-22 09:45 -> get board
+05-12-22 09:45 -> get board
+05-12-22 09:45 -> get board
+05-12-22 09:46 -> get board
+05-12-22 09:46 -> get board
+05-12-22 09:46 -> get board
+05-12-22 09:46 -> get board
+05-12-22 09:46 -> get board
+05-12-22 09:46 -> get board
+05-12-22 10:07 -> Getting all boards
+05-12-22 10:07 -> get board
+05-12-22 10:07 -> get board
+05-12-22 10:07 -> get board
+05-12-22 10:09 -> get board
+05-12-22 10:09 -> get board
+05-12-22 10:10 -> get board
+05-12-22 10:10 -> get board
+05-12-22 10:10 -> get board
+05-12-22 10:12 -> get board
+05-12-22 10:13 -> get board
+05-12-22 10:13 -> get board
+05-12-22 10:14 -> get board
+05-12-22 10:14 -> get board
+05-12-22 10:38 -> add a new tasks
+05-12-22 10:39 -> Error! boarder no tasks was not found!
+05-12-22 10:39 -> Getting all boards
+05-12-22 10:57 -> Error! boarder no tasks was not found!
+05-12-22 10:57 -> Getting all boards
+05-12-22 10:59 -> Error! boarder no tasks was not found!
+05-12-22 10:59 -> Getting all boards
+05-12-22 10:59 -> add a new board
+05-12-22 11:00 -> Getting all boards
+05-12-22 11:01 -> add a new tasks
+05-12-22 11:01 -> Error! boarder no tasks was not found!
+05-12-22 11:01 -> Getting all boards
+05-12-22 11:02 -> Error! boarder no tasks was not found!
+05-12-22 11:02 -> Error! boarder no tasks was not found!
+05-12-22 11:02 -> Getting all boards
+05-12-22 11:03 -> get board
+05-12-22 11:03 -> get board
+05-12-22 11:03 -> get board
+05-12-22 11:04 -> get board
+05-12-22 11:04 -> get board
+05-12-22 11:06 -> get board
+05-12-22 11:06 -> get board
+05-12-22 11:15 -> Getting all boards
+05-12-22 11:15 -> get board
+05-12-22 11:21 -> Error! boarder no tasks was not found!
+05-12-22 11:21 -> Getting all boards
+05-12-22 11:21 -> add a new board
+05-12-22 11:21 -> Getting all boards
+05-12-22 11:22 -> Error! boarder no tasks was not found!
+05-12-22 11:22 -> Getting all boards
+05-12-22 11:23 -> add a new board
+05-12-22 11:23 -> Getting all boards
+05-12-22 11:23 -> get board
+05-12-22 11:24 -> get board
+05-12-22 11:24 -> get board
+05-12-22 11:24 -> get board
+05-12-22 11:24 -> delete a board
+05-12-22 11:24 -> Getting all boards
+05-12-22 11:24 -> Getting all boards
+05-12-22 11:24 -> delete a board
+05-12-22 11:24 -> Getting all boards
+05-12-22 11:24 -> delete a board
+05-12-22 11:24 -> Getting all boards
+05-12-22 11:25 -> Getting all boards
+05-12-22 11:25 -> get board
+05-12-22 11:25 -> Error! boarder no tasks was not found!
+05-12-22 11:25 -> Error! boarder no tasks was not found!
+05-12-22 11:25 -> Error! boarder no tasks was not found!
+05-12-22 11:25 -> Getting all boards
+05-12-22 11:26 -> add a new board
+05-12-22 11:26 -> Getting all boards
+05-12-22 11:26 -> Getting all boards
+05-12-22 11:26 -> Getting all boards
+05-12-22 11:26 -> Getting all boards
+05-12-22 11:26 -> get board
+05-12-22 11:26 -> delete a board
+05-12-22 11:26 -> Getting all boards
+05-12-22 11:28 -> add a new tasks
+05-12-22 11:28 -> add a new tasks
+05-12-22 11:28 -> Error! boarder no tasks was not found!
+05-12-22 11:28 -> Getting all boards
+05-12-22 11:28 -> Getting all boards
+05-12-22 11:28 -> get board
+05-12-22 11:29 -> Error! boarder no tasks was not found!
+05-12-22 11:29 -> Getting all boards
+05-12-22 11:50 -> get board
+05-12-22 11:57 -> get board
+05-12-22 11:58 -> add a new board
+05-12-22 11:58 -> get board
+05-12-22 11:58 -> get board
+05-12-22 11:58 -> Getting all boards
+05-12-22 11:58 -> get board
+05-12-22 11:58 -> get board
+05-12-22 11:58 -> get board
+06-12-22 12:09 -> get board
+06-12-22 12:09 -> get board
+06-12-22 12:09 -> add a new board
+06-12-22 12:09 -> get board
+06-12-22 12:09 -> get board
+06-12-22 12:10 -> get board
+06-12-22 12:10 -> get board
+06-12-22 12:10 -> delete a board
+06-12-22 12:10 -> Getting all boards
+06-12-22 12:10 -> get board
+06-12-22 12:10 -> delete a board
+06-12-22 12:10 -> Getting all boards
+06-12-22 12:11 -> get board
+06-12-22 12:16 -> get board
+06-12-22 12:16 -> add a new board
+06-12-22 12:16 -> get board
+06-12-22 12:17 -> Getting all boards
+06-12-22 12:17 -> Getting all boards
+06-12-22 12:17 -> Getting all boards
+06-12-22 12:17 -> get board
+06-12-22 12:19 -> get board
+06-12-22 12:19 -> get board
+06-12-22 12:19 -> get board
+06-12-22 12:19 -> get board
+06-12-22 12:19 -> add a new board
+06-12-22 12:19 -> add a new tasks
+06-12-22 12:19 -> Getting all boards
+06-12-22 12:19 -> delete a board
+06-12-22 12:20 -> Error! boarder no 8 was not found!
+06-12-22 12:20 -> Getting all boards
+06-12-22 12:20 -> delete a board
+06-12-22 12:20 -> Getting all boards
+06-12-22 12:20 -> get board
+06-12-22 12:20 -> get board
+06-12-22 12:20 -> get board
+06-12-22 12:20 -> get board
+06-12-22 12:26 -> get board
+06-12-22 12:26 -> add a new board
+06-12-22 12:27 -> get board
+06-12-22 12:27 -> get board
+06-12-22 12:27 -> Getting all boards
+06-12-22 12:27 -> Getting all boards
+06-12-22 12:27 -> Getting all boards
+06-12-22 12:27 -> Getting all boards
+06-12-22 12:27 -> Getting all boards
+06-12-22 12:28 -> Getting all boards
+06-12-22 12:28 -> get board
+06-12-22 12:28 -> add a new board
+06-12-22 12:28 -> get board
+06-12-22 12:28 -> get board
+06-12-22 12:28 -> Getting all boards
+06-12-22 12:29 -> Getting all boards
+06-12-22 12:29 -> get board
+06-12-22 12:29 -> add a new board
+06-12-22 12:30 -> get board
+06-12-22 12:30 -> get board
+06-12-22 12:30 -> Getting all boards
+06-12-22 12:35 -> Getting all boards
+06-12-22 12:35 -> delete a board
+06-12-22 12:35 -> Error! boarder no 7 was not found!
+06-12-22 12:35 -> Getting all boards
+06-12-22 12:35 -> delete a board
+06-12-22 12:36 -> Getting all boards
+06-12-22 12:36 -> delete a board
+06-12-22 12:36 -> Getting all boards
+06-12-22 12:36 -> add a new board
+06-12-22 12:36 -> Getting all boards
+06-12-22 12:36 -> delete a board
+06-12-22 12:36 -> Getting all boards
+06-12-22 12:36 -> add a new board
+06-12-22 12:36 -> Getting all boards
+06-12-22 12:38 -> Getting all boards
+06-12-22 12:38 -> get board
+06-12-22 12:39 -> add a new board
+06-12-22 12:39 -> get board
+06-12-22 12:39 -> get board
+06-12-22 12:39 -> Getting all boards
+06-12-22 12:39 -> get board
+06-12-22 12:45 -> Getting all boards
+06-12-22 12:45 -> get board
+06-12-22 12:45 -> add a new board
+06-12-22 12:45 -> get board
+06-12-22 12:45 -> get board
+06-12-22 12:46 -> Getting all boards
+06-12-22 12:46 -> Getting all boards
+06-12-22 12:46 -> delete a board
+06-12-22 12:46 -> Getting all boards
+06-12-22 12:46 -> delete a board
+06-12-22 12:46 -> Getting all boards
+06-12-22 12:46 -> Getting all boards
+06-12-22 12:53 -> Getting all boards
+06-12-22 12:53 -> get board
+06-12-22 12:53 -> add a new board
+06-12-22 12:53 -> get board
+06-12-22 12:54 -> Getting all boards
+06-12-22 12:54 -> get board
+06-12-22 12:55 -> Getting all boards
+06-12-22 12:55 -> delete a board
+06-12-22 12:55 -> Getting all boards
+06-12-22 12:55 -> get board
+06-12-22 12:55 -> add a new board
+06-12-22 12:57 -> get board
+06-12-22 12:57 -> add a new board
+06-12-22 12:58 -> Getting all boards
+06-12-22 12:58 -> Getting all boards
+06-12-22 12:58 -> Getting all boards
+06-12-22 12:58 -> delete a board
+06-12-22 12:58 -> Getting all boards
+06-12-22 12:58 -> delete a board
+06-12-22 12:58 -> Getting all boards
+06-12-22 12:59 -> Getting all boards
+06-12-22 12:59 -> get board
+06-12-22 12:59 -> add a new board
+06-12-22 01:00 -> get board
+06-12-22 01:00 -> add a new board
+06-12-22 01:01 -> Error! boarder no tasks was not found!
+06-12-22 01:01 -> Getting all boards
+06-12-22 01:02 -> Getting all boards
+06-12-22 01:02 -> get board
+06-12-22 01:02 -> get board
+06-12-22 01:02 -> add a new board
+06-12-22 01:04 -> get board
+06-12-22 01:05 -> add a new board
+06-12-22 01:05 -> get board
+06-12-22 01:05 -> Getting all boards
+06-12-22 01:05 -> Getting all boards
+06-12-22 01:05 -> delete a board
+06-12-22 01:05 -> Getting all boards
+06-12-22 01:05 -> delete a board
+06-12-22 01:05 -> Getting all boards
+06-12-22 01:05 -> delete a board
+06-12-22 01:05 -> Getting all boards
+06-12-22 01:05 -> delete a board
+06-12-22 01:06 -> Getting all boards
+06-12-22 09:38 -> Getting all boards
+06-12-22 09:38 -> get board
+06-12-22 09:38 -> add a new board
+06-12-22 09:38 -> Getting all boards
+06-12-22 09:39 -> delete a board
+06-12-22 09:39 -> Getting all boards
+06-12-22 09:39 -> get board
+06-12-22 09:39 -> update a board
+06-12-22 09:39 -> Getting all boards
+06-12-22 09:39 -> get board
+06-12-22 09:40 -> get board
+06-12-22 09:40 -> add a new board
+06-12-22 09:40 -> add a new board
+06-12-22 09:40 -> Getting all boards
+06-12-22 09:40 -> delete a board
+06-12-22 09:41 -> Getting all boards
+06-12-22 09:41 -> delete a board
+06-12-22 09:41 -> Getting all boards
+06-12-22 10:14 -> Getting all boards
+06-12-22 10:14 -> get board
+06-12-22 10:48 -> Getting all boards
+06-12-22 10:55 -> Getting all boards
+06-12-22 10:55 -> get board
+06-12-22 10:56 -> add a new board
+06-12-22 10:56 -> get board
+06-12-22 10:56 -> Getting all boards
+06-12-22 10:56 -> delete a board
+06-12-22 10:56 -> Getting all boards
+06-12-22 10:57 -> Getting all boards
+06-12-22 10:57 -> get board
+06-12-22 10:57 -> add a new tasks
+06-12-22 10:57 -> get board
+06-12-22 10:59 -> get board
+06-12-22 10:59 -> get board
+06-12-22 10:59 -> add a new tasks
+06-12-22 10:59 -> get board
+06-12-22 10:59 -> get board
+06-12-22 10:59 -> get board
+06-12-22 11:05 -> get board
+06-12-22 11:05 -> get board
+06-12-22 11:05 -> add a new tasks
+06-12-22 11:05 -> get board
+06-12-22 11:06 -> Getting all boards
+06-12-22 11:07 -> get board
+06-12-22 11:07 -> add a new tasks
+06-12-22 11:07 -> get board
+06-12-22 11:07 -> get board
+06-12-22 11:07 -> get board
+06-12-22 11:08 -> get board
+06-12-22 11:08 -> get board
+06-12-22 11:10 -> get board
+06-12-22 11:10 -> add a new tasks
+06-12-22 11:10 -> get board
+06-12-22 11:10 -> get board
+06-12-22 11:10 -> get board
+06-12-22 11:10 -> get board
+06-12-22 11:11 -> get board
+06-12-22 11:11 -> add a new tasks
+06-12-22 11:11 -> get board
+06-12-22 11:14 -> get board
+06-12-22 11:14 -> add a new tasks
+06-12-22 11:14 -> get board
+06-12-22 11:17 -> Error! boarder no task312 was not found!
+06-12-22 11:17 -> get board
+06-12-22 11:17 -> get board
+06-12-22 11:17 -> get board
+06-12-22 11:17 -> get board
+06-12-22 11:17 -> get board
+06-12-22 11:17 -> get board
+06-12-22 11:18 -> Getting all boards
+06-12-22 11:20 -> get board
+06-12-22 11:20 -> get board
+06-12-22 11:20 -> get board
+06-12-22 11:38 -> Getting all boards
+06-12-22 11:38 -> get board
+06-12-22 11:38 -> get board
+06-12-22 11:39 -> add a new tasks
+06-12-22 11:39 -> get board
+06-12-22 11:40 -> get board
+06-12-22 11:40 -> add a new tasks
+06-12-22 11:40 -> get board
+06-12-22 11:42 -> get board
+06-12-22 11:42 -> add a new tasks
+06-12-22 11:42 -> get board
+06-12-22 11:42 -> get board
+06-12-22 11:42 -> add a new tasks
+06-12-22 11:42 -> get board
+06-12-22 11:43 -> get board
+06-12-22 11:43 -> add a new tasks
+06-12-22 11:43 -> get board
+06-12-22 11:43 -> get board
+06-12-22 11:43 -> add a new tasks
+06-12-22 11:44 -> get board
+06-12-22 11:46 -> Getting all boards
+06-12-22 11:47 -> get board
+06-12-22 11:47 -> add a new tasks
+06-12-22 11:47 -> get board
+06-12-22 11:48 -> Getting all boards
+06-12-22 11:48 -> Getting all boards
+06-12-22 12:32 -> updateTask
+06-12-22 12:37 -> get board
+06-12-22 12:59 -> get board
+06-12-22 12:59 -> add a new tasks
+06-12-22 12:59 -> get board
+06-12-22 01:03 -> get board
+06-12-22 01:03 -> Getting all boards
+06-12-22 01:03 -> get board
+06-12-22 01:04 -> get board
+06-12-22 01:11 -> get board
+06-12-22 01:30 -> get board
+06-12-22 01:30 -> get board
+06-12-22 01:31 -> get board
+06-12-22 01:31 -> get board
+06-12-22 01:33 -> get board
+06-12-22 01:33 -> get board
+06-12-22 01:34 -> get board
+06-12-22 01:34 -> get board
+06-12-22 01:34 -> get board
+06-12-22 01:34 -> get board
+06-12-22 01:40 -> Error! boarder no tasks was not found!
+06-12-22 01:41 -> Getting all boards
+06-12-22 01:42 -> Error! boarder no tasks was not found!
+06-12-22 01:42 -> Error! boarder no task was not found!
+06-12-22 01:43 -> Error! boarder no tasks was not found!
+06-12-22 01:46 -> Error! boarder no tasks was not found!
+06-12-22 01:46 -> Error! boarder no tasks was not found!
+06-12-22 01:48 -> Error! boarder no tasks was not found!
+06-12-22 01:48 -> Error! boarder no tasks was not found!
+06-12-22 01:48 -> Getting all boards
+06-12-22 01:49 -> Error! boarder no tasks was not found!
+06-12-22 01:54 -> deleteTask
+06-12-22 01:54 -> Getting all boards
+06-12-22 01:55 -> deleteTask
+06-12-22 01:55 -> Getting all boards
+06-12-22 01:56 -> get board
+06-12-22 01:57 -> add a new tasks
+06-12-22 01:57 -> get board
+06-12-22 01:57 -> get board
+06-12-22 01:58 -> get board
+06-12-22 01:59 -> get board
+06-12-22 01:59 -> deleteTask
+06-12-22 01:59 -> get board
+06-12-22 01:59 -> add a new tasks
+06-12-22 01:59 -> get board
+06-12-22 01:59 -> deleteTask
+06-12-22 01:59 -> get board
+06-12-22 02:00 -> get board
+06-12-22 02:00 -> get board
+06-12-22 02:00 -> deleteTask
+06-12-22 02:00 -> get board
+06-12-22 02:00 -> get board
+06-12-22 02:01 -> get board
+06-12-22 02:01 -> get board
+06-12-22 02:01 -> deleteTask
+06-12-22 02:02 -> get board
+06-12-22 02:02 -> get board
+06-12-22 02:02 -> get board
+06-12-22 02:51 -> get board
+06-12-22 02:54 -> get board
+06-12-22 02:55 -> get board
+06-12-22 03:03 -> Getting all boards
+06-12-22 03:04 -> Getting all boards
+06-12-22 03:05 -> get board
+06-12-22 03:05 -> add a new tasks
+06-12-22 03:06 -> get board
+06-12-22 03:09 -> get board
+06-12-22 03:09 -> get board
+06-12-22 03:10 -> get board
+06-12-22 03:10 -> get board
+06-12-22 03:10 -> updateTask
+06-12-22 03:10 -> get board
+06-12-22 03:11 -> updateTask
+06-12-22 03:11 -> get board
+06-12-22 03:13 -> get board
+06-12-22 03:13 -> updateTask
+06-12-22 03:13 -> get board
+06-12-22 03:13 -> get board
+06-12-22 03:14 -> get board
+06-12-22 03:14 -> updateTask
+06-12-22 03:15 -> get board
+06-12-22 03:15 -> updateTask
+06-12-22 03:15 -> get board
+06-12-22 03:20 -> get board
+06-12-22 03:21 -> get board
+06-12-22 03:21 -> task no undefined is deleted
+06-12-22 03:21 -> get board
+06-12-22 03:21 -> add a new tasks
+06-12-22 03:25 -> get board
+06-12-22 03:26 -> updateTask
+06-12-22 03:26 -> get board
+06-12-22 03:26 -> get board
+06-12-22 03:26 -> get board
+06-12-22 03:26 -> updateTask
+06-12-22 03:26 -> get board
+06-12-22 03:27 -> updateTask
+06-12-22 03:27 -> get board
+06-12-22 03:28 -> updateTask
+06-12-22 03:28 -> get board
+06-12-22 03:28 -> Getting all boards
+06-12-22 03:28 -> get board
+06-12-22 03:45 -> get board
+06-12-22 04:07 -> get board
+06-12-22 04:08 -> get board
+06-12-22 04:09 -> get board
+06-12-22 04:09 -> exportBoardToCSV
+06-12-22 04:09 -> get board
+06-12-22 04:11 -> exportBoardToCSV
+06-12-22 04:14 -> Getting all boards
+06-12-22 04:15 -> get board
+06-12-22 04:15 -> updateTask
+06-12-22 04:20 -> exportBoardToCSV
+06-12-22 04:20 -> get board
+06-12-22 04:20 -> exportBoardToCSV
+06-12-22 04:22 -> get board
+06-12-22 04:22 -> exportBoardToCSV
+06-12-22 04:24 -> get board
+06-12-22 04:24 -> exportBoardToCSV
+06-12-22 04:24 -> get board
+06-12-22 04:24 -> exportBoardToCSV
+06-12-22 04:25 -> get board
+06-12-22 04:25 -> exportBoardToCSV
+06-12-22 04:25 -> get board
+06-12-22 05:54 -> get board
+06-12-22 05:54 -> Getting all boards
+06-12-22 05:54 -> get board
+06-12-22 06:22 -> Getting all boards
+06-12-22 06:22 -> get board
