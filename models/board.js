@@ -15,7 +15,7 @@ const boardSchema = new Schema({
     BoardId : {type: Number, unique: 1, index:1},
     BoardName : String,
     Tasks: Array
-},{collection:'Tasks', versionKey:false})
+},{collection:'Boards', versionKey:false})
 
 const Task = model('Task', taskSchema);
 const Board = model('Board',boardSchema);
