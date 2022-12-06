@@ -17,6 +17,7 @@
 </head>
 
 <body>
+
     <header>
         <div class="container-fluid wrapper">
             <div class="row">
@@ -117,7 +118,7 @@
                                                 </button>
                                             </a>
                                             <a href="javascript: void(0);" class="dropdown-item notify-item">
-                                                <button type="button" class="btn">
+                                                <button type="button" id="csv" class="btn" data-bs-toggle="modal" data-bs-target="#csvdata">
                                                     <span><i class="fa-solid fa-file-csv m-2"></i></span>
                                                     <span>Export to csv</span>
                                                 </button>
@@ -168,6 +169,79 @@
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
                         <button type="submit" class="btn btn-danger">Delete</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="modal fade" id="csvdata" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <form >
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Export To csv</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p >Succes!</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                        <button type="submit" class="btn btn-danger">Delete</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="modal fade" id="edittaskmodel" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <form id="edittask">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Edit task</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p id="editmsg"></p>
+                        <div class="form-floating">
+                            <input type="text" class="form-control mb-4" id="taskname_edit" placeholder="name" required>
+                            <label class="form-label" for="taskname_edit">Name</label>
+                        </div>
+                        <div class="form-floating">
+                            <input type="text" class="form-control mb-4" id="taskdetails_edit" placeholder="name" required>
+                            <label class="form-label" for="taskdetails_edit">Details</label>
+                        </div>
+                        <div class="form-floating">
+                            <select class="form-select mb-4" id="status_edit" name="task_status" required>
+                                <option class="forsector" value="To-do">To-do</option>
+                                <option class="forsector" value="In-progress">in-progress</option>
+                                <option class="forsector" value="Done">Ddone</option>
+                            </select>
+                            <label for="status_edit">Status</label>
+                        </div>
+                        <div class="form-floating">
+                            <select class="form-select mb-4" id="priority_edit" name="task_priority" required>
+                                <option class="forsector" value="Low">Low</option>
+                                <option class="forsector" value="Medium">Medium</option>
+                                <option class="forsector" value="High">High</option>
+                            </select>
+                            <label for="priority_edit">Priority</label>
+                        </div>
+                        <div class="form-floating">
+                            <select class="form-select mb-4" id="feature_edit" name="feature_status" required>
+                                <option class="forsector" value="Bug">Bug</option>
+                                <option class="forsector" value="Feature">Feature</option>
+                            </select>
+                            <label for="feature_edit">Type</label>
+                        </div>
+                        <div class="form-floating">
+                            <input type="email" class="form-control mb-4" id="taskassignee_edit" placeholder="name" required>
+                            <label class="form-label" for="taskassignee_edit">Assignee</label>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary">Save</button>
                     </div>
                 </div>
             </div>

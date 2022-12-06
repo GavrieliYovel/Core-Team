@@ -554,3 +554,36 @@
 06-12-22 06:24 -> Getting all boards
 06-12-22 06:24 -> getting tasks.ejs
 06-12-22 06:24 -> get board
+06-12-22 07:01 -> getting index.ejs
+06-12-22 07:02 -> getting index.ejs
+06-12-22 07:02 -> getting boards.ejs
+06-12-22 07:02 -> Getting all boards
+06-12-22 07:02 -> add a new board
+06-12-22 07:02 -> getting boards.ejs
+06-12-22 07:02 -> Getting all boards
+06-12-22 07:02 -> getting tasks.ejs
+06-12-22 07:02 -> get board
+06-12-22 07:03 -> getting tasks.ejs
+06-12-22 07:03 -> get board
+06-12-22 07:04 -> getting tasks.ejs
+06-12-22 07:04 -> get board
+06-12-22 07:05 -> getting tasks.ejs
+06-12-22 07:05 -> get board
+06-12-22 07:06 -> getting boards.ejs
+06-12-22 07:06 -> Getting all boards
+06-12-22 07:06 -> getting tasks.ejs
+06-12-22 07:06 -> get board
+06-12-22 07:06 -> getting tasks.ejs
+06-12-22 07:06 -> get board
+06-12-22 07:06 -> getting tasks.ejs
+06-12-22 07:06 -> get board
+06-12-22 07:06 -> getting tasks.ejs
+06-12-22 07:06 -> get board
+06-12-22 07:06 -> getting tasks.ejs
+06-12-22 07:06 -> get board
+06-12-22 07:06 -> getting tasks.ejs
+06-12-22 07:06 -> get board
+06-12-22 07:06 -> getting tasks.ejs
+06-12-22 07:06 -> get board
+06-12-22 07:07 -> getting tasks.ejs
+06-12-22 07:07 -> get board

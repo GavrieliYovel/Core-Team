@@ -13,7 +13,7 @@ app.use("/js", express.static(__dirname + "public/js"));
 app.use("/includes", express.static(__dirname + "public/includes"));
 
 // set views
-app.set("views", "./pages");
+app.set("views", "./views");
 app.set("view engine", "ejs");
 
 app.use(cors());
