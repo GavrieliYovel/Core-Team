@@ -2,7 +2,7 @@ const express = require("express"); // const http = require('http');
 const app = express();
 const port = process.env.PORT || 8080;
 // const logger = require("morgan"); //NOTE: for debugging
-const { boardRouter } = require("./routers/boardsAndTasksRouter");
+const { boardRouter } = require("./routers/boardRouter");
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
 // app.use(logger("dev"));

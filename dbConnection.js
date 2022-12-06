@@ -1,12 +1,13 @@
 const mongoose = require('mongoose');
-const url = `mongodb+srv://Viki:Viki1996@cluster0.vrxr9qa.mongodb.net/Boards?retryWrites=true&w=majority`;
+require('dotenv').config();
+
 
 const options = {
     useNewUrlParser: true,    // For deprecation warnings
     useUnifiedTopology: true // For deprecation warnings
 };
-
+mongoose.set('strictQuery', false);
 mongoose
-    .connect(url, options)
+    .connect(process.env.DB_HOST, options)
     .then(() => console.log('connected'))
     .catch(err => console.log(`connection error: ${err}`));
