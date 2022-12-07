@@ -10,7 +10,7 @@ boardsRouter.put('/tasks', boardsController.updateTask);
 boardsRouter.put('/', boardsController.updateBord);
 
 boardsRouter.delete('/tasks', boardsController.deleteTask);
-boardsRouter.delete('/:id', boardsController.deleteBoard);
+boardsRouter.delete('/', boardsController.deleteBoard);
 
 boardsRouter.post('/tasks', boardsController.createNewTask);
 boardsRouter.post('/', boardsController.createNewBoard);

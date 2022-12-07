@@ -25,7 +25,11 @@ window.onload = () => {
         closeModel(deletemodel);
         const requestOptions = {
             method: "DELETE",
-            id : boardId 
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            body : JSON.stringify({ id: boardId })
         };
         removeBoard(requestOptions);
     });
@@ -112,7 +116,7 @@ function init() {
       }
     }
     if(!userEmail) {
-      window.location = "./index.html";
+      window.location = "./index";
     }
 }
 
@@ -144,9 +148,8 @@ function insertTable() {
 }
 
 function removeBoard(requestOptions) {
-    const requestUrl = "http://localhost:3000/api/boards/" + requestOptions.id;
-    fetch(requestUrl, requestOptions)     
-    .then(response => response.json())       
+    fetch("http://localhost:3000/api/boards/", requestOptions) 
+    .then(response => response.text())       
     .then(resule => {
         alert(resule);
     });
@@ -154,7 +157,7 @@ function removeBoard(requestOptions) {
 
 function createBoard(requestOptions) {
     fetch("http://localhost:3000/api/boards", requestOptions)     
-    .then(response => response.json())       
+    .then(response => response.text())       
     .then(resule => {
         alert(resule);
     });
@@ -162,7 +165,7 @@ function createBoard(requestOptions) {
 
 function updateBoard(requestOptions) {
     fetch("http://localhost:3000/api/boards", requestOptions)     
-    .then(response => response.json())       
+    .then(response => response.text())       
     .then(resule => {
         alert(resule);
     });

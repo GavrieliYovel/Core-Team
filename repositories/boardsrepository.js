@@ -1,7 +1,8 @@
 const fs = require('fs');
 const Path = require('path');
 const { EventEmitter } = require('events');
-
+const { Parser } = require('json2csv');
+const json2csvParser = new Parser();
 
 module.exports = class BoardsRepository extends EventEmitter {
     constructor() {
@@ -58,8 +59,7 @@ module.exports = class BoardsRepository extends EventEmitter {
         const newBoard = {
             BoardId: newID,
             BoardName: payload.BoardName,
-            Tasks: [],
-            Employees: []
+            Tasks: []
         }
         this.setBoards([...this.data, newBoard]);
     }
@@ -69,4 +69,67 @@ module.exports = class BoardsRepository extends EventEmitter {
         this.emit('updateBoards');
     }
 
+    setTaskByBoard(boardId,data) {
+        this.data.find(board => board.BoardId == boardId).Tasks = data;
+    }
+    updateTaskByBoard(payload, boardId){
+        this.setTaskByBoard(boardId, [...this.data.find(board => board.BoardId == boardId).Tasks, payload]);
+        this.emit('updateBoards');
+    }
+    createNewTask(payload) {
+        let newID = 1;
+        if (this.data.find(board => board.BoardId == payload.BoardId).Tasks.length > 0)
+            newID = this.data.find(board => board.BoardId == payload.BoardId).Tasks[this.data.find(board => board.BoardId == payload.BoardId).Tasks.length - 1].TaskId + 1;
+        console.log(newID);
+        const newTask = {
+            TaskId: newID,
+            TaskName: payload.TaskName,
+            TaskDetails: payload.TaskDetails,
+            Status: payload.Status,
+            Priority: payload.Priority,
+            Type: payload.Type,
+            Assignee: payload.Assignee,
+            Creator: payload.Creator
+        }
+        console.log(newTask);
+        this.updateTaskByBoard(newTask, payload.BoardId);
+    }
+    updateTask(payload){
+        console.log(payload.TaskId)
+        if (payload.hasOwnProperty('Type'))
+            this.data.find(board => board.BoardId == payload.BoardId).Tasks.find(task => task.TaskId == payload.TaskId).Type = payload.Type;
+        if (payload.hasOwnProperty('Priority'))
+            this.data.find(board => board.BoardId == payload.BoardId).Tasks.find(task => task.TaskId == payload.TaskId).Priority = payload.Priority;
+        if (payload.hasOwnProperty('TaskName'))
+            this.data.find(board => board.BoardId == payload.BoardId).Tasks.find(task => task.TaskId == payload.TaskId).TaskName = payload.TaskName;
+        if (payload.hasOwnProperty('TaskDetails'))
+            this.data.find(board => board.BoardId == payload.BoardId).Tasks.find(task => task.TaskId == payload.TaskId).TaskDetails = payload.TaskDetails;
+        if (payload.hasOwnProperty('Assignee'))
+            this.data.find(board => board.BoardId == payload.BoardId).Tasks.find(task => task.TaskId == payload.TaskId).Assignee = payload.Assignee;
+        if (payload.hasOwnProperty('Status'))
+            this.data.find(board => board.BoardId == payload.BoardId).Tasks.find(task => task.TaskId == payload.TaskId).Status = payload.Status;
+        this.emit('updateBoards');
+    }
+    deleteTask(payload) {
+        if(this.data.find(board => board.BoardId == payload.BoardId) &&
+            this.data.find(board => board.BoardId == payload.BoardId).Tasks.find(task => task.TaskId == payload.TaskId)) {
+            this.data.find(board => board.BoardId == payload.BoardId).Tasks = this.data.find(board => board.BoardId == payload.BoardId).Tasks.filter(task => task.TaskId != payload.TaskId);
+            this.emit('updateBoards');
+        }
+        else {
+            this.emit('error');
+            return false;
+        }
+    }
+    exportToCsv(boardId){
+        const ToDo  = this.data.find(board => board.BoardId == boardId).Tasks;
+        const csv   = json2csvParser.parse(ToDo);
+        fs.writeFileSync('tasks.csv', csv, function(err) {
+            if(err) {
+                this.emit('csv convert error');
+                throw err;
+            }
+        });
+        return csv;
+    }
 }

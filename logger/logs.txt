@@ -587,3 +587,311 @@
 06-12-22 07:06 -> get board
 06-12-22 07:07 -> getting tasks.ejs
 06-12-22 07:07 -> get board
+06-12-22 08:35 -> getting index.ejs
+06-12-22 08:35 -> getting boards.ejs
+06-12-22 08:35 -> Getting all boards
+06-12-22 08:35 -> getting tasks.ejs
+06-12-22 08:35 -> getting board no 1
+06-12-22 08:35 -> getting tasks.ejs
+06-12-22 08:35 -> getting board no 2
+06-12-22 08:35 -> getting tasks.ejs
+06-12-22 08:35 -> getting board no 4
+06-12-22 08:35 -> getting tasks.ejs
+06-12-22 08:35 -> getting board no 1
+06-12-22 08:37 -> Getting all boards
+06-12-22 08:37 -> getting board no 2
+06-12-22 08:37 -> getting board no 4
+06-12-22 08:37 -> getting board no 5
+06-12-22 08:39 -> getting index.ejs
+06-12-22 08:39 -> getting boards.ejs
+06-12-22 08:39 -> Getting all boards
+06-12-22 08:39 -> getting tasks.ejs
+06-12-22 08:39 -> getting board no 5
+06-12-22 08:39 -> getting tasks.ejs
+06-12-22 08:39 -> getting board no 3
+06-12-22 08:41 -> getting tasks.ejs
+06-12-22 08:41 -> getting board no 2
+06-12-22 08:41 -> getting tasks.ejs
+06-12-22 08:41 -> getting board no 4
+06-12-22 08:41 -> getting tasks.ejs
+06-12-22 08:41 -> getting board no 1
+06-12-22 08:41 -> getting tasks.ejs
+06-12-22 08:41 -> getting board no 6
+06-12-22 08:41 -> getting tasks.ejs
+06-12-22 08:41 -> getting board no 8
+06-12-22 08:41 -> getting tasks.ejs
+06-12-22 08:41 -> getting board no 2
+06-12-22 10:39 -> getting index.ejs
+06-12-22 10:39 -> getting boards.ejs
+06-12-22 10:39 -> Getting all boards
+06-12-22 10:40 -> getting boards.ejs
+06-12-22 10:40 -> Getting all boards
+06-12-22 10:40 -> getting index.ejs
+06-12-22 10:40 -> getting boards.ejs
+06-12-22 10:40 -> getting index.ejs
+06-12-22 10:40 -> Getting all boards
+06-12-22 10:40 -> getting boards.ejs
+06-12-22 10:40 -> Getting all boards
+06-12-22 10:40 -> getting tasks.ejs
+06-12-22 10:40 -> getting board no 2
+06-12-22 10:40 -> getting tasks.ejs
+06-12-22 10:40 -> getting board no 7
+06-12-22 10:40 -> getting tasks.ejs
+06-12-22 10:40 -> getting board no 6
+06-12-22 10:40 -> getting tasks.ejs
+06-12-22 10:40 -> getting board no 8
+06-12-22 10:41 -> getting tasks.ejs
+06-12-22 10:41 -> getting board no 5
+06-12-22 10:41 -> getting tasks.ejs
+06-12-22 10:41 -> getting board no 2
+06-12-22 10:41 -> getting tasks.ejs
+06-12-22 10:41 -> getting board no 2
+06-12-22 10:41 -> getting tasks.ejs
+06-12-22 10:41 -> getting board no 8
+06-12-22 10:41 -> getting tasks.ejs
+06-12-22 10:41 -> getting board no 2
+06-12-22 10:44 -> getting boards.ejs
+06-12-22 10:44 -> Getting all boards
+06-12-22 10:44 -> delete a board
+06-12-22 10:45 -> getting boards.ejs
+06-12-22 10:45 -> Getting all boards
+06-12-22 10:45 -> delete a board
+06-12-22 10:45 -> getting boards.ejs
+06-12-22 10:45 -> Getting all boards
+06-12-22 10:46 -> delete a board
+06-12-22 10:47 -> getting boards.ejs
+06-12-22 10:47 -> Getting all boards
+06-12-22 10:48 -> getting boards.ejs
+06-12-22 10:48 -> Getting all boards
+06-12-22 10:48 -> getting boards.ejs
+06-12-22 10:48 -> Getting all boards
+06-12-22 10:48 -> delete a board
+06-12-22 10:49 -> getting boards.ejs
+06-12-22 10:49 -> Getting all boards
+06-12-22 10:49 -> delete a board
+06-12-22 10:49 -> getting boards.ejs
+06-12-22 10:49 -> Getting all boards
+06-12-22 10:50 -> creating a new board
+06-12-22 10:50 -> getting boards.ejs
+06-12-22 10:50 -> Getting all boards
+06-12-22 10:50 -> creating a new board
+06-12-22 10:52 -> getting boards.ejs
+06-12-22 10:52 -> Getting all boards
+06-12-22 10:52 -> delete a board
+06-12-22 10:52 -> getting boards.ejs
+06-12-22 10:52 -> Getting all boards
+06-12-22 10:57 -> getting boards.ejs
+06-12-22 10:57 -> Getting all boards
+06-12-22 10:57 -> delete a board
+06-12-22 11:00 -> getting boards.ejs
+06-12-22 11:00 -> Getting all boards
+06-12-22 11:01 -> creating a new board
+06-12-22 11:01 -> getting boards.ejs
+06-12-22 11:01 -> Getting all boards
+06-12-22 11:01 -> delete a board
+06-12-22 11:01 -> getting boards.ejs
+06-12-22 11:01 -> Getting all boards
+06-12-22 11:01 -> getting boards.ejs
+06-12-22 11:01 -> Getting all boards
+06-12-22 11:02 -> creating a new board
+06-12-22 11:02 -> getting boards.ejs
+06-12-22 11:02 -> Getting all boards
+06-12-22 11:02 -> creating a new board
+06-12-22 11:02 -> getting boards.ejs
+06-12-22 11:02 -> Getting all boards
+06-12-22 11:03 -> update a board no 10
+06-12-22 11:03 -> getting boards.ejs
+06-12-22 11:03 -> Getting all boards
+06-12-22 11:03 -> creating a new board
+06-12-22 11:03 -> creating a new board
+06-12-22 11:03 -> creating a new board
+06-12-22 11:03 -> creating a new board
+06-12-22 11:03 -> creating a new board
+06-12-22 11:03 -> getting boards.ejs
+06-12-22 11:03 -> Getting all boards
+06-12-22 11:04 -> update a board no 11
+06-12-22 11:04 -> getting boards.ejs
+06-12-22 11:04 -> Getting all boards
+06-12-22 11:04 -> getting boards.ejs
+06-12-22 11:04 -> Getting all boards
+06-12-22 11:04 -> getting boards.ejs
+06-12-22 11:04 -> Getting all boards
+06-12-22 11:04 -> getting boards.ejs
+06-12-22 11:04 -> Getting all boards
+06-12-22 11:04 -> getting boards.ejs
+06-12-22 11:04 -> Getting all boards
+06-12-22 11:04 -> getting boards.ejs
+06-12-22 11:04 -> Getting all boards
+06-12-22 11:05 -> getting boards.ejs
+06-12-22 11:05 -> Getting all boards
+06-12-22 11:05 -> delete a board
+06-12-22 11:06 -> getting boards.ejs
+06-12-22 11:06 -> Getting all boards
+06-12-22 11:06 -> delete a board
+06-12-22 11:07 -> getting boards.ejs
+06-12-22 11:07 -> Getting all boards
+06-12-22 11:07 -> delete a board
+06-12-22 11:07 -> delete a board
+06-12-22 11:07 -> delete a board
+06-12-22 11:08 -> getting boards.ejs
+06-12-22 11:08 -> Getting all boards
+06-12-22 11:28 -> getting tasks.ejs
+06-12-22 11:28 -> getting board no 1
+06-12-22 11:31 -> getting tasks.ejs
+06-12-22 11:31 -> getting board no 1
+06-12-22 11:31 -> getting tasks.ejs
+06-12-22 11:31 -> getting board no 1
+06-12-22 11:31 -> getting tasks.ejs
+06-12-22 11:31 -> getting board no 2
+06-12-22 11:31 -> getting tasks.ejs
+06-12-22 11:31 -> getting board no 4
+06-12-22 11:32 -> getting boards.ejs
+06-12-22 11:32 -> Getting all boards
+06-12-22 11:32 -> getting tasks.ejs
+06-12-22 11:32 -> getting board no 2
+06-12-22 11:33 -> getting tasks.ejs
+06-12-22 11:33 -> getting board no 2
+06-12-22 11:33 -> getting tasks.ejs
+06-12-22 11:33 -> getting board no 2
+07-12-22 01:25 -> getting index.ejs
+07-12-22 01:25 -> getting boards.ejs
+07-12-22 01:25 -> Getting all boards
+07-12-22 01:26 -> getting tasks.ejs
+07-12-22 01:26 -> getting board no 1
+07-12-22 01:26 -> getting tasks.ejs
+07-12-22 01:26 -> getting board no 2
+07-12-22 01:26 -> adding a new task
+07-12-22 01:26 -> getting tasks.ejs
+07-12-22 01:26 -> getting board no 2
+07-12-22 01:26 -> error
+07-12-22 01:47 -> getting tasks.ejs
+07-12-22 01:47 -> getting board no 2
+07-12-22 01:47 -> error
+07-12-22 01:48 -> getting boards.ejs
+07-12-22 01:48 -> Getting all boards
+07-12-22 01:48 -> getting tasks.ejs
+07-12-22 01:48 -> getting board no 4
+07-12-22 01:48 -> getting boards.ejs
+07-12-22 01:48 -> Getting all boards
+07-12-22 01:48 -> getting tasks.ejs
+07-12-22 01:48 -> getting board no 6
+07-12-22 01:48 -> getting boards.ejs
+07-12-22 01:48 -> Getting all boards
+07-12-22 01:48 -> getting tasks.ejs
+07-12-22 01:48 -> getting board no 8
+07-12-22 01:48 -> getting boards.ejs
+07-12-22 01:48 -> Getting all boards
+07-12-22 01:48 -> getting tasks.ejs
+07-12-22 01:48 -> getting board no 1
+07-12-22 01:48 -> getting boards.ejs
+07-12-22 01:48 -> Getting all boards
+07-12-22 01:48 -> getting tasks.ejs
+07-12-22 01:48 -> getting board no 2
+07-12-22 01:48 -> getting boards.ejs
+07-12-22 01:48 -> Getting all boards
+07-12-22 01:48 -> getting tasks.ejs
+07-12-22 01:48 -> getting board no 10
+07-12-22 01:48 -> getting boards.ejs
+07-12-22 01:48 -> Getting all boards
+07-12-22 01:48 -> getting tasks.ejs
+07-12-22 01:48 -> getting board no 5
+07-12-22 01:49 -> getting boards.ejs
+07-12-22 01:49 -> Getting all boards
+07-12-22 01:49 -> getting tasks.ejs
+07-12-22 01:49 -> getting board no 3
+07-12-22 01:49 -> getting boards.ejs
+07-12-22 01:49 -> Getting all boards
+07-12-22 01:49 -> getting tasks.ejs
+07-12-22 01:49 -> getting board no 2
+07-12-22 01:49 -> getting tasks.ejs
+07-12-22 01:49 -> getting board no 2
+07-12-22 01:50 -> adding a new task
+07-12-22 01:50 -> getting tasks.ejs
+07-12-22 01:50 -> getting board no 2
+07-12-22 01:52 -> getting tasks.ejs
+07-12-22 01:53 -> getting tasks.ejs
+07-12-22 01:53 -> getting board no 2
+07-12-22 01:53 -> error
+07-12-22 01:54 -> getting tasks.ejs
+07-12-22 01:54 -> getting board no 2
+07-12-22 01:54 -> exportBoardToCSV
+07-12-22 01:54 -> getting tasks.ejs
+07-12-22 01:54 -> getting index.ejs
+07-12-22 01:55 -> exportBoardToCSV
+07-12-22 01:55 -> exportBoardToCSV
+07-12-22 01:56 -> getting tasks.ejs
+07-12-22 01:56 -> getting board no 2
+07-12-22 01:56 -> exportBoardToCSV
+07-12-22 01:58 -> exportBoardToCSV
+07-12-22 02:00 -> getting tasks.ejs
+07-12-22 02:00 -> getting board no 2
+07-12-22 02:00 -> exportBoardToCSV
+07-12-22 02:09 -> getting tasks.ejs
+07-12-22 02:09 -> getting board no 2
+07-12-22 02:09 -> exportBoardToCSV
+07-12-22 02:37 -> getting tasks.ejs
+07-12-22 02:37 -> getting board no 2
+07-12-22 02:37 -> exportBoardToCSV
+07-12-22 02:37 -> getting tasks.ejs
+07-12-22 02:37 -> getting board no 2
+07-12-22 02:38 -> getting tasks.ejs
+07-12-22 02:38 -> getting board no 2
+07-12-22 02:39 -> exportBoardToCSV
+07-12-22 02:39 -> exportBoardToCSV
+07-12-22 02:39 -> exportBoardToCSV
+07-12-22 02:39 -> getting tasks.ejs
+07-12-22 02:39 -> getting board no 2
+07-12-22 02:40 -> getting boards.ejs
+07-12-22 02:40 -> Getting all boards
+07-12-22 02:40 -> getting tasks.ejs
+07-12-22 02:40 -> getting board no 10
+07-12-22 02:40 -> delete a board
+07-12-22 02:40 -> getting tasks.ejs
+07-12-22 02:40 -> getting board no 4
+07-12-22 02:40 -> getting boards.ejs
+07-12-22 02:40 -> Getting all boards
+07-12-22 02:40 -> getting tasks.ejs
+07-12-22 02:40 -> getting board no 4
+07-12-22 02:40 -> getting tasks.ejs
+07-12-22 02:40 -> getting board no 1
+07-12-22 02:40 -> getting tasks.ejs
+07-12-22 02:40 -> getting board no 2
+07-12-22 02:40 -> task no undefined is deleted
+07-12-22 02:44 -> getting tasks.ejs
+07-12-22 02:44 -> getting board no 2
+07-12-22 02:47 -> getting tasks.ejs
+07-12-22 02:47 -> getting board no 2
+07-12-22 02:48 -> getting tasks.ejs
+07-12-22 02:48 -> getting board no 3
+07-12-22 02:48 -> adding a new task
+07-12-22 02:48 -> getting tasks.ejs
+07-12-22 02:48 -> getting board no 3
+07-12-22 02:59 -> getting tasks.ejs
+07-12-22 02:59 -> getting board no 3
+07-12-22 02:59 -> getting tasks.ejs
+07-12-22 02:59 -> getting board no 4
+07-12-22 03:00 -> error
+07-12-22 03:00 -> adding a new task
+07-12-22 03:00 -> getting tasks.ejs
+07-12-22 03:00 -> getting board no 4
+07-12-22 03:06 -> getting tasks.ejs
+07-12-22 03:06 -> getting board no 4
+07-12-22 03:06 -> adding a new task
+07-12-22 03:06 -> getting tasks.ejs
+07-12-22 03:06 -> getting board no 4
+07-12-22 03:14 -> getting boards.ejs
+07-12-22 03:14 -> Getting all boards
+07-12-22 03:14 -> getting tasks.ejs
+07-12-22 03:14 -> getting board no 1
+07-12-22 03:14 -> getting tasks.ejs
+07-12-22 03:14 -> getting board no 2
+07-12-22 03:16 -> updateTask
+07-12-22 03:16 -> getting tasks.ejs
+07-12-22 03:16 -> getting board no 2
+07-12-22 03:16 -> getting tasks.ejs
+07-12-22 03:16 -> getting board no 2
+07-12-22 03:17 -> getting index.ejs
+07-12-22 03:17 -> getting boards.ejs
+07-12-22 03:17 -> Getting all boards
+07-12-22 03:17 -> getting tasks.ejs
+07-12-22 03:17 -> getting board no 4

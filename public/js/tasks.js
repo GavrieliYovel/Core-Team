@@ -2,7 +2,6 @@ window.onload = () => {
   
   init();
   insertTable();
- // insetTableBoards();
 
   todayInput.value = new Date().toLocaleDateString();
   new Chart(bar, {
@@ -124,8 +123,8 @@ window.onload = () => {
     })
 }
 
-const todayInput      = document.getElementById('dash-daterange');
-const dropZoneTasks   = document.getElementById('droptasks');
+const todayInput    = document.getElementById('dash-daterange');
+const dropZoneTasks = document.getElementById('droptasks');
 
 const bar           = document.getElementById('bar');
 const doughnut      = document.getElementById('doughnut');
@@ -133,26 +132,26 @@ const csvBtn        = document.getElementById("csv");
 
 /*********************CreateTask**************************/
 
-const addmodeltask = document.getElementById('addtaskmodel');
-const addTasks     =document.getElementById('addtask');
-const newTaskName  = document.getElementById('taskname_new');
-const Taskdetails_new  = document.getElementById('taskdetails_new');
-const Status_new  = document.getElementById('status_new');
-const Priority_new  = document.getElementById('priority_new');
-const Feature_new  = document.getElementById('feature_new');
+const addmodeltask      = document.getElementById('addtaskmodel');
+const addTasks          = document.getElementById('addtask');
+const newTaskName       = document.getElementById('taskname_new');
+const Taskdetails_new   = document.getElementById('taskdetails_new');
+const Status_new        = document.getElementById('status_new');
+const Priority_new      = document.getElementById('priority_new');
+const Feature_new       = document.getElementById('feature_new');
 const Taskassignee_new  = document.getElementById('taskassignee_new');
 
 /*********************EditTask**************************/
 
-const editmodeltask = document.getElementById('edittaskmodel');
-const editTask      = document.getElementById('edittask');
-const editmsg       = document.getElementById('editmsg');
-const editTaskName  = document.getElementById('taskname_edit');
+const editmodeltask     = document.getElementById('edittaskmodel');
+const editTask          = document.getElementById('edittask');
+const editmsg           = document.getElementById('editmsg');
+const editTaskName      = document.getElementById('taskname_edit');
 const Taskdetails_edit  = document.getElementById('taskdetails_edit');
-const Status_edit   = document.getElementById('status_edit');
-const Priority_edit = document.getElementById('priority_edit');
-const Feature_edit  = document.getElementById('feature_edit');
-const Taskassignee_edit  = document.getElementById('taskassignee_edit');
+const Status_edit       = document.getElementById('status_edit');
+const Priority_edit     = document.getElementById('priority_edit');
+const Feature_edit      = document.getElementById('feature_edit');
+const Taskassignee_edit = document.getElementById('taskassignee_edit');
 
 
 
@@ -211,7 +210,7 @@ function init() {
     }
   }
   if(!userEmail) {
-    window.location = "./index.html";
+    window.location = "./index";
   }
 }
 
@@ -236,37 +235,33 @@ function insertTable() {
             }
             deleteTasks = document.getElementsByClassName('deletetask');
             deleteT();
-            editTasks     = document.getElementsByClassName('edittask');
+            editTasks   = document.getElementsByClassName('edittask');
             editT();
         });
 }
 function createTasks(requestOptions) {
     fetch("http://localhost:3000/api/boards/tasks", requestOptions)
-        .then(response => response.json())
-        .then(resule => {
-            alert(resule);
-        });
+    .then(response => response.text())
+    .then(result => {
+      alert(result);
+    });
 }
 function updateTask(requestOptions) {
     fetch("http://localhost:3000/api/boards/tasks", requestOptions)
-        .then(response => response.json())
-        .then(resule => {
-            alert(resule);
-        });
+    .then(response => response.text())
+    .then(result => {
+      alert(result);
+    });
 }
 
 function removeTask(requestOptions) {
     fetch("http://localhost:3000/api/boards/tasks", requestOptions)
-        .then(response => response.json())
-        .then(resule => {
-            alert(resule);
-        });
+    .then(response => response.text())
+    .then(result => {
+      alert(result);
+    });
 }
 
 function conTocsv() {
-    fetch("http://localhost:3000/api/boards/csv/" + boardId)
-        .then(response => response.json())
-        .then(resule => {
-            console.log(resule);
-        });
+  window.open("http://localhost:3000/api/boards/csv/" + boardId, '_blank');
 }
