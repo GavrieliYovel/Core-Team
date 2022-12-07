@@ -1,0 +1,38 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+main, nav, aside, section, header {
+	display: block;
+}
+
+body {
+    background: #fafbfe;
+}
+
+a {
+    color: #919ca7;
+}
+
+a:hover {
+    color: white;
+}
+
+.card {
+    background: #313a46;
+    color: #919ca7;
+    border: none;
+    box-shadow: 20px 20px 10px #d4d4d4b7;
+}
+
+.btn {
+    color: #919ca7;
+    border: 2px solid #919ca7;
+}
+
+.btn:hover {
+    color: #313a46;
+    border: 2px solid white;
+    background: white;
+}
