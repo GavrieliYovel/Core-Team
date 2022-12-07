@@ -218,7 +218,7 @@ function init() {
 }
 
 function insertTable() {
-    fetch("http://localhost:3000/api/boards/" + boardId)
+    fetch("https://core-team.onrender.com/api/boards/" + boardId)
         .then(response => response.json())
         .then(board => {
             boardname.innerHTML = board.BoardName;
@@ -243,19 +243,19 @@ function insertTable() {
         });
 }
 function createTasks(requestOptions) {
-    fetch("http://localhost:3000/api/boards/tasks", requestOptions)
+    fetch("https://core-team.onrender.com/api/boards/tasks", requestOptions)
     .then(response => response.text());
 }
 function updateTask(requestOptions) {
-    fetch("http://localhost:3000/api/boards/tasks", requestOptions)
+    fetch("https://core-team.onrender.com/api/boards/tasks", requestOptions)
     .then(response => response.text());
 }
 
 function removeTask(requestOptions) {
-    fetch("http://localhost:3000/api/boards/tasks", requestOptions)
+    fetch("https://core-team.onrender.com/api/boards/tasks", requestOptions)
     .then(response => response.text());
 }
 
 function conTocsv() {
-  window.open("http://localhost:3000/api/boards/csv/" + boardId, '_blank');
+  window.open("https://core-team.onrender.com/api/boards/csv/" + boardId, '_blank');
 }

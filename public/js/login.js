@@ -5,7 +5,7 @@ window.onload = () => {
         event.preventDefault();
         const email = inputs[0].value;
         const pass  = inputs[1].value;
-        
+
         //const user = getUser(email);
         const user = {
             email    : email,
@@ -30,7 +30,7 @@ const error     = document.getElementById('error');
 
 function getUser(email) {
     try {
-        const response =  fetch(`http://localhost:8081/api/login?email=${email}`);
+        const response =  fetch(`https://core-team.onrender.com/api/login?email=${email}`);
         return response.json();
     } catch(error) {
         return null;

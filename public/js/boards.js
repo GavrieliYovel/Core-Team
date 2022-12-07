@@ -126,7 +126,7 @@ function init() {
 
 function insertTable() {
 
-    fetch("http://localhost:3000/api/boards")
+    fetch("https://core-team.onrender.com/api/boards")
     .then(response => response.json())
     .then(boards => {
         for (const key in boards) {
@@ -152,17 +152,17 @@ function insertTable() {
 }
 
 function removeBoard(requestOptions) {
-    fetch("http://localhost:3000/api/boards/", requestOptions)
+    fetch("https://core-team.onrender.com/api/boards/", requestOptions)
     .then(response => response.text());
 }
 
 function createBoard(requestOptions) {
-    fetch("http://localhost:3000/api/boards", requestOptions)
+    fetch("https://core-team.onrender.com/api/boards", requestOptions)
     .then(response => response.text());
 
 }
 
 function updateBoard(requestOptions) {
-    fetch("http://localhost:3000/api/boards", requestOptions)
+    fetch("https://core-team.onrender.com/api/boards", requestOptions)
     .then(response => response.text());
 }
