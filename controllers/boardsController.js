@@ -1,5 +1,14 @@
 const {Board,Task} = require('../models/board');
+const { IncomingWebhook } = require('@slack/webhook');
+const url = process.env.SLACK_WEBHOOK_URL;
+const webhook = new IncomingWebhook(url);
 
+// Send the notification
+async function notifySlack(message) {
+    await webhook.send({
+        text: message
+    });
+};
 exports.boardDbController = {
     async getBoards(req, res) {
         await Board.find({}).exec()
@@ -11,10 +20,8 @@ exports.boardDbController = {
             });
     },
     async getBoardById(req, res) {
-        console.log("Board Id ="+req.params.id);
         await Board.find({BoardId:req.params.id}).exec()
             .then(docs => {
-                console.log(docs[0]);
                 res.json(docs[0])
             })
             .catch(err => {
@@ -73,9 +80,12 @@ exports.boardDbController = {
         await Board.find({BoardId: req.body.BoardId}).exec()
             .then(async board => {
                 if (board.length == 1) {
+                    let oldName = board[0].BoardName;
                     board[0].BoardName = req.body.BoardName;
                     const result = await Board.findOneAndUpdate({BoardId: req.body.BoardId}, board[0]);
                     res.json(result);
+                    await notifySlack('Board '+ req.body.BoardId+' has been updated:'+
+                        '\n*Name: '+oldName+' :arrow_right: '+board[0].BoardName);
                 }
             })
             .catch(err => {
@@ -83,16 +93,19 @@ exports.boardDbController = {
             });
     },
     async deleteBoard(req, res) {
-        const result = await Board.findOneAndDelete({BoardId: req.body.BoardId});
+        let board = await Board.findOneAndDelete({BoardId: req.body.BoardId});
+        await notifySlack('Board "'+ board.BoardName +'" has been deleted.');
         res.json("");
     },
     async deleteTask(req, res) {
         await Board.find({BoardId: req.body.BoardId})
             .then (async board => {
                 if (board.length == 1) {
+                    let taskName = board[0].Tasks.find(task => task.TaskId == req.body.TaskId).TaskName;
                     board[0].Tasks = board[0].Tasks.filter(task => task.TaskId != req.body.TaskId);
                     await Board.findOneAndUpdate({BoardId: req.body.BoardId}, board[0]);
                     res.json(`Task ${req.body.TaskId} deleted`);
+                    await notifySlack('Task "' +taskName+ '" on board "' +board[0].BoardName+'" has been deleted.');
                 }
             })
             .catch(err => {
@@ -118,25 +131,51 @@ exports.boardDbController = {
                 console.log(`Error getting data from DB:${err}`)
             });
     },
+    /* TaskId: {type:Number, index:1},
+    TaskName: String,
+    TaskDetails: String,
+    Status: String,
+    Priority: String,
+    Type: String,
+    Assignee: String,
+    Creator: String*/
     async updateTask(req, res) {
         await Board.find({BoardId: req.body.BoardId})
             .then(async board => {
                 if (board.length == 1) {
-                    if (req.body.hasOwnProperty('TaskDetails'))
-                        board[0].Tasks.find(task => task.TaskId == req.body.TaskId).TaskDetails = req.body.TaskDetails;
-                    if (req.body.hasOwnProperty('Assignee'))
-                        board[0].Tasks.find(task => task.TaskId == req.body.TaskId).Assignee = req.body.Assignee;
-                    if (req.body.hasOwnProperty('Status'))
-                        board[0].Tasks.find(task => task.TaskId == req.body.TaskId).Status = req.body.Status;
-                    if (req.body.hasOwnProperty('TaskName'))
+                    let task = board[0].Tasks.find(task => task.TaskId == req.body.TaskId);
+                    let update ='';
+                    update += '\n*Task Name*: '+task.TaskName;
+                    if (req.body.hasOwnProperty('TaskName')){
+                        update += ':arrow_right:'+req.body.TaskName;
                         board[0].Tasks.find(task => task.TaskId == req.body.TaskId).TaskName = req.body.TaskName;
-                    if (req.body.hasOwnProperty('Priority'))
+                    }
+                    update += '\n*Task Details*: '+task.TaskDetails;
+                    if (req.body.hasOwnProperty('TaskDetails')){
+                        update += ':arrow_right:'+req.body.TaskDetails;
+                        board[0].Tasks.find(task => task.TaskId == req.body.TaskId).TaskDetails = req.body.TaskDetails;
+                    }
+                    update += '\n*Status*: '+task.Status;
+                    if (req.body.hasOwnProperty('Status')) {
+                        update += ':arrow_right:'+req.body.Status;
+                        board[0].Tasks.find(task => task.TaskId == req.body.TaskId).Status = req.body.Status;
+                    }
+                    update += '\n*Priority*: '+task.Priority;
+                    if (req.body.hasOwnProperty('Priority')){
+                        update += ':arrow_right:'+req.body.Priority;
                         board[0].Tasks.find(task => task.TaskId == req.body.TaskId).Priority = req.body.Priority;
-                    if (req.body.hasOwnProperty('Type'))
+                    }
+                    update += '\n*Assignee*: '+task.Assignee;
+                    if (req.body.hasOwnProperty('Assignee')) {
+                        update += ':arrow_right:'+req.body.Assignee;
+                        board[0].Tasks.find(task => task.TaskId == req.body.TaskId).Assignee = req.body.Assignee;
+                    }
+                    update += '\n*Type*: '+task.Type;
+                    if (req.body.hasOwnProperty('Type')){
+                        update += ':arrow_right:'+req.body.Type;
                         board[0].Tasks.find(task => task.TaskId == req.body.TaskId).Type = req.body.Type;
-                    if (req.body.hasOwnProperty('Priority'))
-                        board[0].Tasks.find(task => task.TaskId == req.body.TaskId).Priority = req.body.Priority;
-
+                    }
+                    await notifySlack('Task '+task.TaskName+' on Board ' +board[0].BoardName+ ' has been updated:'+update);
                     await Board.findOneAndUpdate({BoardId: req.body.BoardId}, board[0]);
                     res.json(board[0]);
                 }

@@ -18,7 +18,7 @@ window.onload = () => {
             body: JSON.stringify(postReq)
         };
         createBoard(requestOptions);
-        document.location.reload(true);
+        document.location.reload();
     });
 
     deleteBoard.addEventListener("submit", (event) => {
@@ -34,7 +34,7 @@ window.onload = () => {
             body : JSON.stringify(deleteReq)
         };
         removeBoard(requestOptions);
-        document.location.reload(true);
+        document.location.reload();
     });
 
     editBoard.addEventListener("submit", (event) => {
@@ -50,7 +50,7 @@ window.onload = () => {
             body: JSON.stringify(editReq)
         };
         updateBoard(requestOptions);
-        document.location.reload(true);
+        document.location.reload();
     });
 
     $(".tbody").on("click", "td[role=\"button\"]", function (e) {

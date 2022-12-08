@@ -57,7 +57,7 @@ window.onload = () => {
       body: JSON.stringify(deleteReq)
     };
     removeTask(requestOptions);
-    document.location.reload(true);
+    document.location.reload();
   });
 
   for (let i = 0; i < insertemail.length; i++) {
@@ -91,7 +91,7 @@ window.onload = () => {
             body: JSON.stringify(postReq)
         };
         createTasks(requestOptions);
-        document.location.reload(true);
+        document.location.reload();
     });
 
     editTask.addEventListener("submit", (event) => {
@@ -118,7 +118,7 @@ window.onload = () => {
         };
         // console.log(editReq)
         updateTask(requestOptions);
-        document.location.reload(true);
+        document.location.reload();
     });
 
     csvBtn.addEventListener('click', (event) => {
