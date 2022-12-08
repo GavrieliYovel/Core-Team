@@ -105,7 +105,7 @@ exports.boardDbController = {
                     board[0].Tasks = board[0].Tasks.filter(task => task.TaskId != req.body.TaskId);
                     await Board.findOneAndUpdate({BoardId: req.body.BoardId}, board[0]);
                     res.json(`Task ${req.body.TaskId} deleted`);
-                    await notifySlack('Task "' +taskName+ '" on board"' +board[0].BoardName+'" has been deleted.');
+                    await notifySlack('Task "' +taskName+ '" on board "' +board[0].BoardName+'" has been deleted.');
                 }
             })
             .catch(err => {
@@ -167,7 +167,7 @@ exports.boardDbController = {
                         update += ':arrow_right:'+req.body.Type;
                         board[0].Tasks.find(task => task.TaskId == req.body.TaskId).Type = req.body.Type;
                     }
-                    await notifySlack('Task "'+task.TaskName+'" on Board "' +board[0].BoardName+ '" has been updated:'+update);
+                    await notifySlack('Task "'+task.TaskName+'" on board "' +board[0].BoardName+ '" has been updated:'+update);
                     await Board.findOneAndUpdate({BoardId: req.body.BoardId}, board[0]);
                     res.json(board[0]);
                 }
