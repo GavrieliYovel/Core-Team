@@ -91,7 +91,7 @@ window.onload = () => {
             body: JSON.stringify(postReq)
         };
         createTasks(requestOptions);
-        document.location.reload(true);
+        document.location.reload();
     });
 
     editTask.addEventListener("submit", (event) => {
@@ -118,7 +118,7 @@ window.onload = () => {
         };
         // console.log(editReq)
         updateTask(requestOptions);
-        document.location.reload(true);
+        document.location.reload();
     });
 
     csvBtn.addEventListener('click', (event) => {
@@ -252,7 +252,7 @@ function updateTask(requestOptions) {
 }
 
 function removeTask(requestOptions) {
-    fetch("https://core-team.onrender.com/boards/tasks", requestOptions)
+    fetch("https://core-team.onrender.com/api/boards/tasks", requestOptions)
     .then(response => response.text());
 }
 
