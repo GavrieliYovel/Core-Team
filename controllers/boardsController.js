@@ -62,7 +62,7 @@ exports.boardDbController = {
                         TaskName: req.body.TaskName,
                         TaskDetails: req.body.TaskDetails,
                         Status: req.body.Status,
-                        Priority: req.body.Status,
+                        Priority: req.body.Priority,
                         Type: req.body.Type,
                         Assignee: req.body.Assignee,
                         Creator: req.body.Creator
@@ -85,7 +85,7 @@ exports.boardDbController = {
                     const result = await Board.findOneAndUpdate({BoardId: req.body.BoardId}, board[0]);
                     res.json(result);
                     await notifySlack('Board '+ req.body.BoardId+' has been updated:'+
-                        '\n*Name: '+oldName+' :arrow_right: '+board[0].BoardName);
+                        '\n*Name*: '+oldName+' :arrow_right: '+board[0].BoardName);
                 }
             })
             .catch(err => {
@@ -105,7 +105,7 @@ exports.boardDbController = {
                     board[0].Tasks = board[0].Tasks.filter(task => task.TaskId != req.body.TaskId);
                     await Board.findOneAndUpdate({BoardId: req.body.BoardId}, board[0]);
                     res.json(`Task ${req.body.TaskId} deleted`);
-                    await notifySlack('Task "' +taskName+ '" on board "' +board[0].BoardName+'" has been deleted.');
+                    await notifySlack('Task "' +taskName+ '" on board"' +board[0].BoardName+'" has been deleted.');
                 }
             })
             .catch(err => {
@@ -131,14 +131,6 @@ exports.boardDbController = {
                 console.log(`Error getting data from DB:${err}`)
             });
     },
-    /* TaskId: {type:Number, index:1},
-    TaskName: String,
-    TaskDetails: String,
-    Status: String,
-    Priority: String,
-    Type: String,
-    Assignee: String,
-    Creator: String*/
     async updateTask(req, res) {
         await Board.find({BoardId: req.body.BoardId})
             .then(async board => {
@@ -175,7 +167,7 @@ exports.boardDbController = {
                         update += ':arrow_right:'+req.body.Type;
                         board[0].Tasks.find(task => task.TaskId == req.body.TaskId).Type = req.body.Type;
                     }
-                    await notifySlack('Task '+task.TaskName+' on Board ' +board[0].BoardName+ ' has been updated:'+update);
+                    await notifySlack('Task "'+task.TaskName+'" on Board "' +board[0].BoardName+ '" has been updated:'+update);
                     await Board.findOneAndUpdate({BoardId: req.body.BoardId}, board[0]);
                     res.json(board[0]);
                 }
