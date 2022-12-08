@@ -57,7 +57,7 @@ window.onload = () => {
       body: JSON.stringify(deleteReq)
     };
     removeTask(requestOptions);
-    document.location.reload(true);
+    document.location.reload();
   });
 
   for (let i = 0; i < insertemail.length; i++) {
@@ -252,7 +252,7 @@ function updateTask(requestOptions) {
 }
 
 function removeTask(requestOptions) {
-    fetch("https://core-team.onrender.com/api/boards/tasks", requestOptions)
+    fetch("https://core-team.onrender.com/boards/tasks", requestOptions)
     .then(response => response.text());
 }
 

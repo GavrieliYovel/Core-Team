@@ -7,8 +7,8 @@ const taskSchema = new Schema({
     Status: String,
     Priority: String,
     Type: String,
-    AssigneeId: String,
-    CreatorId: String
+    Assignee: String,
+    Creator: String
 })
 const boardSchema = new Schema({
     BoardId : {type: Number, unique: 1, index:1},
