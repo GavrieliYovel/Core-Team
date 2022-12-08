@@ -100,7 +100,7 @@ exports.boardDbController = {
             });
     },
     async filterBoardByParameters(req, res) {
-        await Board.find({BoardId: req.params.id})
+        await Board.find({BoardId: req.body.BoardId})
             .then ( board => {
                 if (board.length == 1) {
                     if (req.body.hasOwnProperty('Priority'))
