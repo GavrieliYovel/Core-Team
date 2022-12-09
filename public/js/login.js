@@ -3,6 +3,7 @@ window.onload = () => {
 
     form.addEventListener("submit", (event) => {
         event.preventDefault();
+        console.log("sessiontest");
         const email = inputs[0].value;
         const pass  = inputs[1].value;
 

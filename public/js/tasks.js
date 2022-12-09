@@ -35,14 +35,13 @@ window.onload = () => {
         // console.log(formDataObj);
         closeModel(addmodeltask);
         const postReq = {
-            BoardId: boardId,
-            TaskName : newTaskName.value,
-            TaskDetails : Taskdetails_new.value,
-            Status : Status_new.value,
-            Priority : Priority_new.value,
-            Type : Feature_new.value,
-            Assignee : Taskassignee_new.value,
-            Creator : userEmail,
+            boardId: currentBoardId,
+            taskName : newTaskName.value,
+            taskDetails : Taskdetails_new.value,
+            status : Status_new.value,
+            priority : Priority_new.value,
+            type : Feature_new.value,
+            assignee : Taskassignee_new.value
         };
         console.log(postReq)
         const requestOptions = {
@@ -133,8 +132,8 @@ const deletemsg     = document.getElementById('deletemsg');
 const insertemail   = document.getElementsByClassName('insertemail');
 const boardname     = document.getElementById('boardname');
 
-let taskId;
-let boardId;
+let currentTaskId;
+let currentBoardId;
 let userEmail;
 let deleteTasks   = document.getElementsByClassName('deletetask');
 let editTasks     = document.getElementsByClassName('edittask');
@@ -154,8 +153,8 @@ function deleteT() {
 function editT() {
     for (let i = 0; i < editTasks.length; i++) {
         editTasks[i].onclick = () => {
-            taskId = editTasks[i].childNodes[0].innerHTML;
-            editmsg.innerHTML = "Edit task no " + taskId + "."
+            currentTaskId = editTasks[i].childNodes[0].innerHTML;
+            editmsg.innerHTML = "Edit task no " + currentTaskId + "."
         };
     }
 }
@@ -169,7 +168,7 @@ function init() {
   const queryString = new URLSearchParams(paramString);
   for (let pair of queryString.entries()) {
     if(pair[0] == "boardId") {
-      boardId = pair[1];
+        currentBoardId = pair[1];
     }
   }
 
@@ -260,7 +259,7 @@ function removeTask(requestOptions) {
 }
 
 function conTocsv() {
-  window.open("https://core-team.onrender.com/api/boards/csv/" + boardId, '_blank');
+  window.open("https://core-team.onrender.com/api/boards/csv/" + currentBoardId, '_blank');
 }
 
 function instrCharts() {

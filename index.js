@@ -3,6 +3,13 @@ const express = require("express");
 const path    = require("path")
 const cors    = require('cors');
 const app     = express();
+const dotenv  = require('dotenv');
+const cookieParser = require("cookie-parser");
+const sessions = require('express-session');
+const { boardsRouter } = require("./routers/boardsRouter");
+const { htmlRouter } = require("./routers/htmlRouter");
+const { sessionRouter } = require("./routers/sessionRouter");
+
 require('./dbConnection');
 
 dotenv.config({ path: path.join(__dirname, './.env') });
@@ -36,13 +43,9 @@ app.use(express.json());
 app.use(express.urlencoded({extended: true}));  // hundel post reqs with body
 
 
-
-const { boardsRouter } = require("./routers/boardsRouter");
-
-app.use('/api/boards', boardsRouter);
-
-const { htmlRouter } = require("./routers/htmlRouter")
 app.use('/', htmlRouter);
+app.use('/api/session', sessionRouter);
+app.use('/api/boards', boardsRouter);
 
 app.use((req, res) => {
     res.status(400).send('Something is broken!');
