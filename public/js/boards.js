@@ -2,7 +2,7 @@ window.onload = () => {
 
     todayInput.value = new Date().toLocaleDateString();
     insertTable();
-
+    insertUser();
     addBoard.addEventListener("submit", (event) => {
         event.preventDefault();
         closeModel(addmodel);
@@ -85,6 +85,28 @@ let userEmail;
 let deleteBoards    = document.getElementsByClassName('deleteboard');     //
 let editBoards      = document.getElementsByClassName('editboard');       // they need to be a 'let'
 
+
+const user_name = document.getElementById('user_name');
+const cols      = document.getElementById('headers_permissions');
+let   isManager = false;
+
+function setUser(user) {
+    user_name.innerHTML = user.name;
+    if(user.role == 'Manager') {
+        isManager = true;
+        const delet = document.createElement('th');
+        cols.appendChild(delet);
+    }
+}
+
+function insertUser() {
+    fetch("https://core-team.onrender.com/api/session/checkUser")
+        .then(response => response.json())
+        .then(user => {
+            console.log(user);
+            setUser(user);
+        });
+}
 
 function deleteB() {
     for (let i = 0; i < deleteBoards.length; i++) {
