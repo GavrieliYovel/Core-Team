@@ -1,14 +1,12 @@
 window.onload = () => {
 
-    init();
-
     todayInput.value = new Date().toLocaleDateString();
     insertTable();
 
     addBoard.addEventListener("submit", (event) => {
         event.preventDefault();
         closeModel(addmodel);
-        const postReq = { BoardName : newBoardName.value };
+        const postReq = { boardName : newboardName.value };
         const requestOptions = {
             method: "POST",
             headers: {
@@ -24,7 +22,7 @@ window.onload = () => {
     deleteBoard.addEventListener("submit", (event) => {
         event.preventDefault();
         closeModel(deletemodel);
-        const deleteReq = { BoardId : boardId};
+        const deleteReq = { boardId : boardId};
         const requestOptions = {
             method: "DELETE",
             headers: {
@@ -40,7 +38,7 @@ window.onload = () => {
     editBoard.addEventListener("submit", (event) => {
         event.preventDefault();
         closeModel(editmodel);
-        const editReq = { BoardId : boardId , BoardName : editBoardName.value };
+        const editReq = { boardId : boardId , boardName : editboardName.value };
         const requestOptions = {
             method: "PUT",
             headers: {
@@ -54,7 +52,7 @@ window.onload = () => {
     });
 
     $(".tbody").on("click", "td[role=\"button\"]", function (e) {
-        window.location = $(this).data("href") + "&email=" + userEmail;
+        window.location = $(this).data("href");
     });
 
 
@@ -70,7 +68,7 @@ const dropZone      = document.getElementById('dropboards');
 
 const addmodel      = document.getElementById('addboardmodel');
 const addBoard      = document.getElementById('addboard');
-const newBoardName  = document.getElementById('boardname_new');
+const newboardName  = document.getElementById('boardname_new');
 
 
 const deletemodel   = document.getElementById('deleteboardmodel');
@@ -80,7 +78,7 @@ const deletemsg     = document.getElementById('deletemsg');
 const editmodel     = document.getElementById('editboardmodel');
 const editBoard     = document.getElementById('editboard');
 const editmsg       = document.getElementById('editmsg');
-const editBoardName   = document.getElementById('boardname_edit');
+const editboardName   = document.getElementById('boardname_edit');
 
 let boardId;
 let userEmail;
@@ -111,18 +109,6 @@ function closeModel(model) {
 }
 
 
-function init() {
-    const paramString = window.location.href.split('?')[1];
-    const queryString = new URLSearchParams(paramString);
-    for (let pair of queryString.entries()) {
-      if(pair[0] == "email") {
-        userEmail = pair[1];
-      }
-    }
-    if(!userEmail) {
-      window.location = "./index";
-    }
-}
 
 function insertTable() {
 
@@ -131,16 +117,27 @@ function insertTable() {
     .then(boards => {
         for (const key in boards) {
             const elem = document.createElement('tr');
-            elem.innerHTML = '<td role="button" data-href="./tasks?boardId=' + boards[key].BoardId + '">' + boards[key].BoardId +'</td>'
-            + '<td role="button" data-href="./tasks?boardId='+ boards[key].BoardId +'">'
-                + boards[key].BoardName
-            + '</td>'
-            + '<td> <button type="button" class="btn p-0 editboard" data-bs-toggle="modal" data-bs-target="#editboardmodel"><p hidden>'
-                + boards[key].BoardId
-            + '</p><i class="fa-regular fa-pen-to-square"></i></button></td>'
-            + '<td><button type="button" class="btn p-0 deleteboard" data-bs-toggle="modal" data-bs-target="#deleteboardmodel"><p hidden>'
-                + boards[key].BoardId
-            + '</p><i class="fa-regular fa-trash"></i></button></td>';
+            if (isManager == true) {
+                elem.innerHTML = '<td role="button" data-href="./tasks?boardId=' + boards[key].boardId + '">' + boards[key].boardId +'</td>'
+                    + '<td role="button" data-href="./tasks?boardId='+ boards[key].boardId +'">'
+                    + boards[key].boardName
+                    + '</td>'
+                    + '<td> <button type="button" class="btn p-0 editboard" data-bs-toggle="modal" data-bs-target="#editboardmodel"><p hidden>'
+                    + boards[key].boardId
+                    + '</p><i class="fa-regular fa-pen-to-square"></i></button></td>'
+                    + '<td><button type="button" class="btn p-0 deleteboard" data-bs-toggle="modal" data-bs-target="#deleteboardmodel"><p hidden>'
+                    + boards[key].boardId
+                    + '</p><i class="fa-regular fa-trash"></i></button></td>';
+            }
+            else {
+                elem.innerHTML = '<td role="button" data-href="./tasks?boardId=' + boards[key].boardId + '">' + boards[key].boardId +'</td>'
+                    + '<td role="button" data-href="./tasks?boardId='+ boards[key].boardId +'">'
+                    + boards[key].boardName
+                    + '</td>'
+                    + '<td> <button type="button" class="btn p-0 editboard" data-bs-toggle="modal" data-bs-target="#editboardmodel"><p hidden>'
+                    + boards[key].boardId
+                    + '</p><i class="fa-regular fa-pen-to-square"></i></button></td>';
+            }
             dropZone.appendChild(elem);
         }
         deleteBoards  = document.getElementsByClassName('deleteboard');
@@ -148,8 +145,7 @@ function insertTable() {
         editBoards = document.getElementsByClassName('editboard');
         editB();
     });
-
-}
+};
 
 function removeBoard(requestOptions) {
     fetch("https://core-team.onrender.com/api/boards/", requestOptions)

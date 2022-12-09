@@ -47,7 +47,7 @@ window.onload = () => {
   deletetask.addEventListener("submit", (event) => {
     event.preventDefault();
     closeModel(deletemodel);
-    const deleteReq = { BoardId : boardId, TaskId : taskId};
+    const deleteReq = { boardId : currentBoardId, taskId : currentTaskId};
     const requestOptions = {
       method: "DELETE",
         headers: {
@@ -99,14 +99,14 @@ window.onload = () => {
         closeModel(editmodeltask);
 
         const editReq = {
-            BoardId : boardId,
-            TaskId : taskId,
-            TaskName : editTaskName.value,
-            TaskDetails : Taskdetails_edit.value,
-            Status : Status_edit.value,
-            Priority : Priority_edit.value,
-            Type : Feature_edit.value,
-            Assignee : Taskassignee_edit.value
+            boardId : currentBoardId,
+            taskId : currentTaskId,
+            taskName : editTaskName.value,
+            taskDetails : Taskdetails_edit.value,
+            status : Status_edit.value,
+            priority : Priority_edit.value,
+            type : Feature_edit.value,
+            assignee : Taskassignee_edit.value
         };
         const requestOptions = {
             method: "PUT",
@@ -182,8 +182,8 @@ let editTasks     = document.getElementsByClassName('edittask');
 function deleteT() {
   for (let i = 0; i < deleteTasks.length; i++) {
     deleteTasks[i].onclick = () => {
-        taskId = deleteTasks[i].childNodes[0].innerHTML;
-        deletemsg.innerHTML = "Are you sure you want to delete task no " + taskId + "?"
+        currentTaskId = deleteTasks[i].childNodes[0].innerHTML;
+        deletemsg.innerHTML = "Are you sure you want to delete task no " + currentTaskId + "?"
       };
   }
 }
@@ -208,32 +208,40 @@ function init() {
     if(pair[0] == "boardId") {
       boardId = pair[1];
     }
-    if(pair[0] == "email") {
-      userEmail = pair[1];
-    }
   }
-  if(!userEmail) {
-    window.location = "./index";
-  }
+
 }
 
 function insertTable() {
-    fetch("https://core-team.onrender.com/api/boards/" + boardId)
+    fetch("https://core-team.onrender.com/api/boards/" + currentBoardId)
         .then(response => response.json())
         .then(board => {
-            boardname.innerHTML = board.BoardName;
-            for (const key in board.Tasks) {
+            dropZoneTasks.innerHTML = ""
+            boardname.innerHTML = board.boardName;
+            console.log(board.tasks);
+            for (const key in board.tasks) {
                 const elem = document.createElement('tr');
-                elem.innerHTML = '<td>'+ board.Tasks[key].TaskId +'</td>' + '<td>' +  board.Tasks[key].TaskName + '</td>'
-                    + '<td>' + board.Tasks[key].TaskDetails + '</td>' + '<td>' + board.Tasks[key].Status+ '</td>'
-                    + '<td>' + board.Tasks[key].Priority + '</td>' + '<td>' + board.Tasks[key].Type + '</td>'
-                    + '<td>' + board.Tasks[key].Assignee + '</td>' + '<td>' + board.Tasks[key].Creator + '</td>'
-                    + '<td> <button type="button" class="btn p-0 edittask" data-bs-toggle="modal" data-bs-target="#edittaskmodel"><p hidden>'
-                    + board.Tasks[key].TaskId
-                    + '</p><i class="fa-regular fa-pen-to-square"></i></button></td>'
-                    + '<td><button type="button" class="btn p-0 deletetask" data-bs-toggle="modal" data-bs-target="#deletetaskmodel"><p hidden>'
-                    + board.Tasks[key].TaskId
-                    + '</p><i class="fa-regular fa-trash"></i></button></td>';
+                if (isManager == true) {
+                    elem.innerHTML = '<td>'+ board.tasks[key].taskId +'</td>' + '<td>' +  board.tasks[key].taskName + '</td>'
+                        + '<td>' + board.tasks[key].taskDetails + '</td>' + '<td>' + board.tasks[key].status+ '</td>'
+                        + '<td>' + board.tasks[key].priority + '</td>' + '<td>' + board.tasks[key].type + '</td>'
+                        + '<td>' + board.tasks[key].assignee + '</td>' + '<td>' + board.tasks[key].creator + '</td>'
+                        + '<td> <button type="button" class="btn p-0 edittask" data-bs-toggle="modal" data-bs-target="#edittaskmodel"><p hidden>'
+                        + board.tasks[key].taskId
+                        + '</p><i class="fa-regular fa-pen-to-square"></i></button></td>'
+                        + '<td><button type="button" class="btn p-0 deletetask" data-bs-toggle="modal" data-bs-target="#deletetaskmodel"><p hidden>'
+                        + board.tasks[key].taskId
+                        + '</p><i class="fa-regular fa-trash"></i></button></td>';
+                }
+                else {
+                    elem.innerHTML = '<td>'+ board.tasks[key].taskId +'</td>' + '<td>' +  board.tasks[key].taskName + '</td>'
+                        + '<td>' + board.tasks[key].taskDetails + '</td>' + '<td>' + board.tasks[key].status+ '</td>'
+                        + '<td>' + board.tasks[key].priority + '</td>' + '<td>' + board.tasks[key].type + '</td>'
+                        + '<td>' + board.tasks[key].assignee + '</td>' + '<td>' + board.tasks[key].creator + '</td>'
+                        + '<td> <button type="button" class="btn p-0 edittask" data-bs-toggle="modal" data-bs-target="#edittaskmodel"><p hidden>'
+                        + board.tasks[key].taskId
+                        + '</p><i class="fa-regular fa-pen-to-square"></i></button></td>';
+                }
                 dropZoneTasks.appendChild(elem);
             }
             deleteTasks = document.getElementsByClassName('deletetask');
@@ -244,16 +252,28 @@ function insertTable() {
 }
 function createTasks(requestOptions) {
     fetch("https://core-team.onrender.com/api/boards/tasks", requestOptions)
-    .then(response => response.text());
+    .then(response => response.text())
+        .then(result => {
+            alert(result);
+            insertTable();
+        });
 }
 function updateTask(requestOptions) {
     fetch("https://core-team.onrender.com/api/boards/tasks", requestOptions)
-    .then(response => response.text());
+    .then(response => response.text()
+        .then(result => {
+            alert(result);
+            insertTable();
+        }));
 }
 
 function removeTask(requestOptions) {
     fetch("https://core-team.onrender.com/api/boards/tasks", requestOptions)
-    .then(response => response.text());
+    .then(response => response.text())
+        .then(result => {
+            alert(result);
+            insertTable();
+        });
 }
 
 function conTocsv() {
