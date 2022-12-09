@@ -16,7 +16,7 @@ module.exports = class Logger extends EventEmitter{
     initLogger() {
         this.logger = console;
         this.storage = {
-            write: data=> fs.appendFile(path.join(__dirname,'/logs.txt'),data,null,()=> console.log('data inserted to log file'))
+            write: data=> fs.appendFile(path.join(__dirname,'/logs.txt'),data,null,()=> {})
         };
         this.on('logToFile',this.logToFile);
         return this;
@@ -28,7 +28,7 @@ module.exports = class Logger extends EventEmitter{
         this.emit('logToFile',msg);
         this.logger.log(`${time}->${message}`);
     }
-    
+
     logToFile(data){
         this.storage.write(data + '\n')
     }
