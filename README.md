@@ -1,8 +1,11 @@
 # Core-Team
 
+Render Application: https://core-team.onrender.com/
+
 Postman Documentation : https://documenter.getpostman.com/view/24149790/2s8YzTTMbc
 
 The user must login before accessing the data
+
 User permission are handled by sessions
 
 ## Dependencies
