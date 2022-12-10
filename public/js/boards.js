@@ -96,7 +96,7 @@ function setUser(user) {
 }
 
 function insertUser() {
-    fetch(process.env.LOCAL_PATH + "/api/session/checkUser")
+    fetch("https://core-team.onrender.com/api/session/checkUser")
         .then(response => response.json())
         .then(user => {
             console.log(user);
@@ -132,7 +132,7 @@ function closeModel(model) {
 
 function insertTable() {
 
-    fetch(process.env.LOCAL_PATH + "/api/boards")
+    fetch("https://core-team.onrender.com/api/boards")
     .then(response => response.json())
     .then(boards => {
         for (const key in boards) {
@@ -169,17 +169,17 @@ function insertTable() {
 };
 
 function removeBoard(requestOptions) {
-    fetch(process.env.LOCAL_PATH + "/api/boards/", requestOptions)
+    fetch("https://core-team.onrender.com/api/boards/", requestOptions)
     .then(response => response.text());
 }
 
 function createBoard(requestOptions) {
-    fetch(process.env.LOCAL_PATH + "/api/boards", requestOptions)
+    fetch("https://core-team.onrender.com/api/boards", requestOptions)
     .then(response => response.text());
 
 }
 
 function updateBoard(requestOptions) {
-    fetch(process.env.LOCAL_PATH + "/api/boards", requestOptions)
+    fetch("https://core-team.onrender.com/api/boards", requestOptions)
     .then(response => response.text());
 }
