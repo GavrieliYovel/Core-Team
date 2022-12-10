@@ -249,11 +249,11 @@ exports.boardDbController = {
                     let priorityTask = [0, 0, 0]; //prior[0] = Low, prior[1] = Medium, prior[2] = High
                     console.log(tasks);
                     for (const task of tasks) {
-                        switch (task.Status) {
+                        switch (task.status) {
                             case "To-do":
                                 statusTask[0]++;
                                 break;
-                            case "In-Progress":
+                            case "In-progress":
                                 statusTask[1]++;
                                 break;
                             case "Done":
@@ -262,7 +262,7 @@ exports.boardDbController = {
                             default:
                                 break;
                         }
-                        switch (task.Priority) {
+                        switch (task.priority) {
                             case "Low":
                                 priorityTask[0]++;
                                 break;
@@ -289,7 +289,7 @@ exports.boardDbController = {
                             datasets: [{
                                 label: 'My First Dataset',
                                 // data: [statusTask[0], statusTask[1], statusTask[2]],
-                                data: [1, 1, 1],
+                                data: [statusTask[0], statusTask[1], statusTask[2]],
                                 backgroundColor: [
                                     'rgb(255, 99, 132)',
                                     'rgb(54, 162, 235)',
@@ -305,8 +305,8 @@ exports.boardDbController = {
                             labels: ['Low', 'Medium', 'High'],
                             datasets: [{
                                 label: '# of Votes',
-                                // data: [priorityTask[0], priorityTask[1], priorityTask[2]],
-                                data: [1, 1, 1],
+                                data: [priorityTask[0], priorityTask[1], priorityTask[2]],
+                                //data: [1, 1, 1],
                                 borderWidth: 1
                             }]
                         },
