@@ -1,6 +1,9 @@
 const Logger = require("../logger/Logger");
 const logger = new Logger();
 
+
+
+
 exports.htmlController = {
     //render login page
     getLogin(req, res) {

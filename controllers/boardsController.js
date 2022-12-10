@@ -4,6 +4,7 @@ const Logger = require('../logger/Logger');
 const logger = new Logger();
 const fs = require('fs');
 const { Parser } = require('json2csv');
+const webhook = new IncomingWebhook(process.env.SLACK_WEBHOOK_URL);
 const json2csvParser = new Parser();
 
 
