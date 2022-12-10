@@ -1,7 +1,10 @@
 const {User} = require('../models/user');
+const Logger = require('../logger/Logger');
+const logger = new Logger();
+
 exports.sessionDbController = {
+    //Validate user and making a session
     async login(req, res) {
-        console.log(req.body);
         const email = req.body.userEmail.toLowerCase();
         const password = req.body.userPassword;
         await User.find({$and: [ { userEmail: email }, { userPassword: password }]}).exec()
@@ -9,21 +12,23 @@ exports.sessionDbController = {
                 if (user.length == 1) {
                     req.session.userName = user[0].userName;
                     req.session.userRole = user[0].userRole;
-                    console.log("Success");
+                    logger.log(`${email} logged in successfully`);
                     res.send("Success");
                 } else {
-                    console.log("Error");
+                    logger.log(`${email} failed to login`);
                     res.send("Error");
                 }
             })
             .catch(err => {
-                console.log(`Error getting data from DB:${err}`)
+                logger.log(`Error getting data from DB:${err}`)
             });
     },
+    //destroy the session
     logout(req, res) {
         req.session.destroy();
         res.send("Success");
     },
+    //Get user details from session
     getUser(req, res) {
         res.json({
             "name": req.session.userName,

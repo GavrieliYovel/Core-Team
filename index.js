@@ -10,11 +10,12 @@ const { boardsRouter } = require("./routers/boardsRouter");
 const { htmlRouter } = require("./routers/htmlRouter");
 const { sessionRouter } = require("./routers/sessionRouter");
 
-require('./dbConnection');
+
 
 dotenv.config({ path: path.join(__dirname, './.env') });
 const port = process.env.PORT || 3030;
 
+require('./dbConnection');
 // static files
 app.use(express.static("public"));
 app.use("/css", express.static(__dirname + "public/css"));

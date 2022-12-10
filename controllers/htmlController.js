@@ -1,13 +1,16 @@
 const Logger = require("../logger/Logger");
 const logger = new Logger();
 
-exports.htmlController = {
 
+
+
+exports.htmlController = {
+    //render login page
     getLogin(req, res) {
         logger.log("getting index.ejs");
         res.render("index");
     },
-
+    //render if there is a session to boards list
     getHome(req, res) {
         if(!req.session.userName) {
             res.status(300).redirect('/');
@@ -17,7 +20,7 @@ exports.htmlController = {
         }
 
     },
-
+    //render if there is a session to task list
     getTasksList(req, res) {
         if(!req.session.userName) {
             res.status(300).redirect('/');

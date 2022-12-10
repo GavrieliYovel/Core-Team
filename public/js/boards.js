@@ -56,14 +56,10 @@ window.onload = () => {
     });
 
 
-    for (let i = 0; i < insertemail.length; i++) {
-        insertemail[i].href += ("?email="+ userEmail);
-    }
 
 }
 
 const todayInput    = document.getElementById('dash-daterange');
-const insertemail   = document.getElementsByClassName('insertemail');
 const dropZone      = document.getElementById('dropboards');
 
 const addmodel      = document.getElementById('addboardmodel');
@@ -82,8 +78,8 @@ const editboardName   = document.getElementById('boardname_edit');
 
 let boardId;
 let userEmail;
-let deleteBoards    = document.getElementsByClassName('deleteboard');     //
-let editBoards      = document.getElementsByClassName('editboard');       // they need to be a 'let'
+let deleteBoards    = document.getElementsByClassName('deleteboard');
+let editBoards      = document.getElementsByClassName('editboard');
 
 
 const user_name = document.getElementById('user_name');
@@ -100,7 +96,7 @@ function setUser(user) {
 }
 
 function insertUser() {
-    fetch("https://core-team.onrender.com/api/session/checkUser")
+    fetch(process.env.LOCAL_PATH + "/api/session/checkUser")
         .then(response => response.json())
         .then(user => {
             console.log(user);
@@ -121,7 +117,9 @@ function editB() {
     for (let i = 0; i < editBoards.length; i++) {
         editBoards[i].onclick = () => {
             boardId = editBoards[i].childNodes[0].innerHTML;
-            editmsg.innerHTML = "Edit board number " + boardId + "."
+            editmsg.innerHTML = "Edit board number " + boardId + ".";
+            const fillEditform = document.getElementById(boardId);
+            editboardName.value = fillEditform.childNodes[1].innerHTML;
         };
     }
 }
@@ -134,11 +132,12 @@ function closeModel(model) {
 
 function insertTable() {
 
-    fetch("https://core-team.onrender.com/api/boards")
+    fetch(process.env.LOCAL_PATH + "/api/boards")
     .then(response => response.json())
     .then(boards => {
         for (const key in boards) {
             const elem = document.createElement('tr');
+            elem.id = boards[key].boardId;
             if (isManager == true) {
                 elem.innerHTML = '<td role="button" data-href="./tasks?boardId=' + boards[key].boardId + '">' + boards[key].boardId +'</td>'
                     + '<td role="button" data-href="./tasks?boardId='+ boards[key].boardId +'">'
@@ -170,17 +169,17 @@ function insertTable() {
 };
 
 function removeBoard(requestOptions) {
-    fetch("https://core-team.onrender.com/api/boards/", requestOptions)
+    fetch(process.env.LOCAL_PATH + "/api/boards/", requestOptions)
     .then(response => response.text());
 }
 
 function createBoard(requestOptions) {
-    fetch("https://core-team.onrender.com/api/boards", requestOptions)
+    fetch(process.env.LOCAL_PATH + "/api/boards", requestOptions)
     .then(response => response.text());
 
 }
 
 function updateBoard(requestOptions) {
-    fetch("https://core-team.onrender.com/api/boards", requestOptions)
+    fetch(process.env.LOCAL_PATH + "/api/boards", requestOptions)
     .then(response => response.text());
 }
