@@ -29,10 +29,6 @@ window.onload = () => {
 
     addTasks.addEventListener("submit", (event) => {
         event.preventDefault();
-        // const myFormData = new FormData(event.target);
-        // const formDataObj = Object.fromEntries(myFormData.entries());
-        // formDataObj.Tasks = myFormData.getAll('Tasks');
-        // console.log(formDataObj);
         closeModel(addmodeltask);
         const postReq = {
             boardId: currentBoardId,
@@ -78,7 +74,6 @@ window.onload = () => {
             },
             body: JSON.stringify(editReq)
         };
-        // console.log(editReq)
         updateTask(requestOptions);
         document.location.reload();
     });
@@ -188,7 +183,7 @@ function setUser(user) {
 }
 
 function insertUser() {
-    fetch("https://core-team.onrender.com/api/session/checkUser")
+    fetch(process.env.LOCAL_PATH + "/api/session/checkUser")
         .then(response => response.json())
         .then(user => {
             setUser(user);
@@ -196,7 +191,7 @@ function insertUser() {
 }
 
 function insertTable() {
-    fetch("https://core-team.onrender.com/api/boards/" + currentBoardId)
+    fetch( process.env.LOCAL_PATH + "/api/boards/" + currentBoardId)
         .then(response => response.json())
         .then(board => {
             dropZoneTasks.innerHTML = ""
@@ -234,7 +229,7 @@ function insertTable() {
         });
 }
 function createTasks(requestOptions) {
-    fetch("https://core-team.onrender.com/api/boards/tasks", requestOptions)
+    fetch( process.env.LOCAL_PATH + "/api/boards/tasks", requestOptions)
     .then(response => response.text())
         .then(result => {
             alert(result);
@@ -242,7 +237,7 @@ function createTasks(requestOptions) {
         });
 }
 function updateTask(requestOptions) {
-    fetch("https://core-team.onrender.com/api/boards/tasks", requestOptions)
+    fetch( process.env.LOCAL_PATH + "/api/boards/tasks", requestOptions)
     .then(response => response.text()
         .then(result => {
             alert(result);
@@ -250,7 +245,7 @@ function updateTask(requestOptions) {
         }));
 }
 function removeTask(requestOptions) {
-    fetch("https://core-team.onrender.com/api/boards/tasks", requestOptions)
+    fetch( process.env.LOCAL_PATH + "/api/boards/tasks", requestOptions)
     .then(response => response.text())
         .then(result => {
             alert(result);
@@ -259,11 +254,11 @@ function removeTask(requestOptions) {
 }
 
 function conTocsv() {
-  window.open("https://core-team.onrender.com/api/boards/csv/" + currentBoardId, '_blank');
+  window.open( process.env.LOCAL_PATH + "/api/boards/csv/" + currentBoardId, '_blank');
 }
 
 function instrCharts() {
-    fetch("https://core-team.onrender.com/api/boards/statistics/" + currentBoardId)
+    fetch( process.env.LOCAL_PATH + "/api/boards/statistics/" + currentBoardId)
         .then(response => response.json())
         .then(chars => {
             console.log(chars);
@@ -272,5 +267,15 @@ function instrCharts() {
         });
 
 }
+
+function filterTasks(requestOptions) {
+    fetch(process.env.LOCAL_PATH + "/api/boards/tasks/filter", requestOptions)
+        .then(response => response.json())
+        .then(board => {
+            loadTable(board);
+        });
+}
+
+
 
 

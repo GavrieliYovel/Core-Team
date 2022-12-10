@@ -82,8 +82,8 @@ const editboardName   = document.getElementById('boardname_edit');
 
 let boardId;
 let userEmail;
-let deleteBoards    = document.getElementsByClassName('deleteboard');     //
-let editBoards      = document.getElementsByClassName('editboard');       // they need to be a 'let'
+let deleteBoards    = document.getElementsByClassName('deleteboard');
+let editBoards      = document.getElementsByClassName('editboard');
 
 
 const user_name = document.getElementById('user_name');
@@ -100,7 +100,7 @@ function setUser(user) {
 }
 
 function insertUser() {
-    fetch("https://core-team.onrender.com/api/session/checkUser")
+    fetch(process.env.LOCAL_PATH + "/api/session/checkUser")
         .then(response => response.json())
         .then(user => {
             console.log(user);
