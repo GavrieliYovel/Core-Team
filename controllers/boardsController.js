@@ -1,261 +1,340 @@
 const {Board,Task} = require('../models/board');
+const { IncomingWebhook } = require('@slack/webhook');
+const Logger = require('../logger/Logger');
+const logger = new Logger();
+require('dotenv').config();
+const fs = require('fs');
+const { Parser } = require('json2csv');
+const webhook = new IncomingWebhook(process.env.SLACK_WEBHOOK_URL);
+const json2csvParser = new Parser();
+
+
+// Send the notification
+async function notifySlack(message) {
+    await webhook.send({
+        text: message
+    });
+};
 
 exports.boardDbController = {
+    //Get all boards from DB
     async getBoards(req, res) {
         await Board.find({}).exec()
-            .then(docs => {
-                res.json(docs)
+            .then(boards => {
+                res.json(boards);
             })
             .catch(err => {
-                console.log(`Error getting data from DB:${err}`)
+                logger.log(`Error getting data from DB:${err}`);
             });
     },
+    //Get all board details {boardId, boardName, tasks[]} from DB
     async getBoardById(req, res) {
-        console.log("Board Id ="+req.params.id);
-        await Board.find({BoardId:req.params.id}).exec()
-            .then(docs => {
-                console.log(docs[0]);
-                res.json(docs[0])
+        await Board.find({boardId:req.params.id}).exec()
+            .then(board => {
+                const currentBoard = board[0];
+                res.json(currentBoard);
             })
             .catch(err => {
-                console.log(`Error getting data from DB:${err}`)
+                logger.log(`Error getting data from DB:${err}`);
             });
     },
+    //Creating new board and insert it to DB
     async createNewBoard(req, res) {
-        await Board.find({}).sort(`-BoardId`).limit(1).exec()
-            .then(docs => {
+        await Board.find({}).sort(`-boardId`).limit(1).exec()
+            .then(board => {
                 let newId = 1;
-                if (docs.length == 1)
-                    newId = docs[0].BoardId + 1;
+                if (board.length == 1) {
+                    let lastBoardOnDb = board[0];
+                    newId = lastBoardOnDb.boardId + 1;
+                }
                 const newBoard = new Board({
-                    BoardId: newId,
-                    BoardName: req.body.BoardName,
-                    Tasks: []
+                    boardId: newId,
+                    boardName: req.body.boardName,
+                    tasks: []
                 });
                 const result = newBoard.save();
-                if (result) {
-                    res.json(result);
-                } else {
+                if (result)
+                    res.send(`boardId ${newId} add successfully`);
+                else
                     res.status(404).send("Error saving board");
-                }
+
             })
             .catch(err => {
-                console.log(`Error getting data from DB:${err}`)
+                logger.log(`Error getting data from DB:${err}`)
             });
     },
+    //Creating new task assign it to specific board and insert it to DB
     async createNewTask(req, res) {
-        await Board.find({BoardId: req.body.BoardId}).exec()
+        await Board.find({boardId: req.body.boardId}).exec()
             .then(async board => {
                 if (board.length == 1) {
-                    let taskId = 1;
-                    if (board[0].Tasks.length > 0)
-                        taskId = board[0].Tasks[board[0].Tasks.length - 1].TaskId + 1;
+                    let taskId = 1; //initialize taskId to 1
+                    let currentBoard = board[0];
+                    if (currentBoard.tasks.length > 0)
+                        taskId = currentBoard.tasks[currentBoard.tasks.length - 1].taskId + 1;
                     const newTask = new Task({
-                        TaskId: taskId,
-                        TaskName: req.body.TaskName,
-                        TaskDetails: req.body.TaskDetails,
-                        Status: req.body.Status,
-                        Priority: req.body.Status,
-                        Type: req.body.Type,
-                        Assignee: req.body.Assignee,
-                        Creator: req.body.Creator
+                        taskId: taskId,
+                        taskName: req.body.taskName,
+                        taskDetails: req.body.taskDetails,
+                        status: req.body.status,
+                        priority: req.body.priority,
+                        type: req.body.type,
+                        assignee: req.body.assignee,
+                        creator: req.session.userName
                     });
-                    board[0].Tasks.push(newTask);
-                    const result = await Board.findOneAndUpdate({BoardId: req.body.BoardId}, board[0]);
-                    res.json(result);
+                    currentBoard.tasks.push(newTask);
+
+                    const result = await Board.findOneAndUpdate({boardId: req.body.boardId}, currentBoard);
+                    if (result)
+                        res.send(`taskId ${taskId} add successfully`);
+                    else
+                        res.status(404).send("Error saving task");
                 }
             })
             .catch(err => {
-                console.log(`Error getting data from DB:${err}`)
+                logger.log(`Error getting data from DB:${err}`)
             });
     },
+    //Update board name in DB
     async updateBoard(req, res) {
-        await Board.find({BoardId: req.body.BoardId}).exec()
+        await Board.find({boardId: req.body.boardId}).exec()
             .then(async board => {
                 if (board.length == 1) {
-                    board[0].BoardName = req.body.BoardName;
-                    const result = await Board.findOneAndUpdate({BoardId: req.body.BoardId}, board[0]);
-                    res.json(result);
+                    let currentBoard = board[0];
+                    let oldName = currentBoard.boardName;
+                    currentBoard.boardName = req.body.boardName;
+                    const result = await Board.findOneAndUpdate({boardId: req.body.boardId}, currentBoard);
+                    if(result) {
+                        let message = `Board "${oldName}" is now called "${currentBoard.boardName}"`;
+                        await notifySlack(message);
+                        logger.log(message);
+                        res.send(message);
+                    } else {
+                        res.status(404).send(`Error update boardId ${req.body.boardId}`);
+                    }
+
                 }
             })
             .catch(err => {
-                console.log(`Error getting data from DB:${err}`)
+                logger.log(`Error getting data from DB:${err}`)
             });
     },
+    //Delete board from DB (Only managers can delete)
     async deleteBoard(req, res) {
-        const result = await Board.findOneAndDelete({BoardId: req.body.BoardId});
-        res.json("");
+        if(req.session.userRole == "Manager"){
+            let board = await Board.findOneAndDelete({boardId: req.body.boardId});
+            let message = `Board "${board.boardName}" deleted by ${req.session.userName}`;
+            await notifySlack(message);
+            logger.log(message);
+            res.send(message);
+        } else {
+            logger.log(`${req.session.userName} attempted to delete board number ${req.body.boardId}`);
+            res.send("You do not have permission to delete boards");
+        }
+
     },
+    //Delete task from board from DB (Only managers can delete)
     async deleteTask(req, res) {
-        await Board.find({BoardId: req.body.BoardId})
+        await Board.find({boardId: req.body.boardId})
             .then (async board => {
                 if (board.length == 1) {
-                    board[0].Tasks = board[0].Tasks.filter(task => task.TaskId != req.body.TaskId);
-                    await Board.findOneAndUpdate({BoardId: req.body.BoardId}, board[0]);
-                    res.json(`Task ${req.body.TaskId} deleted`);
+                    let currentBoard = board[0];
+                    let taskName = currentBoard.tasks.find(task => task.taskId == req.body.taskId).taskName;
+                    if (req.session.userRole == "Manager") {
+                        let message = `TaskId "${taskName}" on board "${currentBoard.boardName}" has been deleted by ${req.session.userName}`;
+                        currentBoard.tasks = currentBoard.tasks.filter(task => task.taskId != req.body.taskId);
+                        await Board.findOneAndUpdate({boardId: req.body.boardId}, currentBoard);
+                        await notifySlack(message);
+                        logger.log(message);
+                        res.send(message);
+                    } else {
+                        logger.log(`${req.session.userName} attempted to delete task "${taskName}" in board "${currentBoard.boardName}"`);
+                        res.send("You do not have permission to delete tasks");
+                    }
                 }
             })
             .catch(err => {
-                console.log(`Error getting data from DB:${err}`)
+                logger.log(`Error getting data from DB:${err}`)
             });
     },
+    //Get task from board by specific filtering {priority and/or assignee and/or type and/or status}
     async filterBoardByParameters(req, res) {
-        await Board.find({BoardId: req.params.id})
+        await Board.find({boardId: req.body.boardId})
             .then ( board => {
                 if (board.length == 1) {
-                    if (req.body.hasOwnProperty('Priority'))
-                        board[0].Tasks = board[0].Tasks.filter(task => task.Priority === req.body.Priority);
-                    if (req.body.hasOwnProperty('Assignee'))
-                        board[0].Tasks = board[0].Tasks.filter(task => task.Assignee === req.body.Assignee);
-                    if (req.body.hasOwnProperty('Type'))
-                        board[0].Tasks = board[0].Tasks.filter(task => task.Type === req.body.Type);
-                    if (req.body.hasOwnProperty('Status'))
-                        board[0].Tasks = board[0].Tasks.filter(task => task.Status === req.body.Status);
-                    res.json(board[0].Tasks);
+                    let currentBoard = board[0];
+                    if (req.body.hasOwnProperty('priority'))
+                        currentBoard.tasks = currentBoard.tasks.filter(task => task.priority === req.body.priority);
+                    if (req.body.hasOwnProperty('assignee'))
+                        currentBoard.tasks = currentBoard.tasks.filter(task => task.assignee === req.body.assignee);
+                    if (req.body.hasOwnProperty('type'))
+                        currentBoard.tasks = currentBoard.tasks.filter(task => task.type === req.body.type);
+                    if (req.body.hasOwnProperty('status'))
+                        currentBoard.tasks = currentBoard.tasks.filter(task => task.status === req.body.status);
+                    logger.log(`filterBoardByParameters on ${currentBoard.boardName}`);
+                    res.json(currentBoard);
                 }
             })
             .catch(err => {
-                console.log(`Error getting data from DB:${err}`)
+                logger.log(`Error getting data from DB:${err}`)
             });
     },
+    //Update task properties in DB
     async updateTask(req, res) {
-        await Board.find({BoardId: req.body.BoardId})
+        await Board.find({boardId: req.body.boardId})
             .then(async board => {
                 if (board.length == 1) {
-                    if (req.body.hasOwnProperty('TaskDetails'))
-                        board[0].Tasks.find(task => task.TaskId == req.body.TaskId).TaskDetails = req.body.TaskDetails;
-                    if (req.body.hasOwnProperty('Assignee'))
-                        board[0].Tasks.find(task => task.TaskId == req.body.TaskId).Assignee = req.body.Assignee;
-                    if (req.body.hasOwnProperty('Status'))
-                        board[0].Tasks.find(task => task.TaskId == req.body.TaskId).Status = req.body.Status;
-                    if (req.body.hasOwnProperty('TaskName'))
-                        board[0].Tasks.find(task => task.TaskId == req.body.TaskId).TaskName = req.body.TaskName;
-                    if (req.body.hasOwnProperty('Priority'))
-                        board[0].Tasks.find(task => task.TaskId == req.body.TaskId).Priority = req.body.Priority;
-                    if (req.body.hasOwnProperty('Type'))
-                        board[0].Tasks.find(task => task.TaskId == req.body.TaskId).Type = req.body.Type;
-                    if (req.body.hasOwnProperty('Priority'))
-                        board[0].Tasks.find(task => task.TaskId == req.body.TaskId).Priority = req.body.Priority;
-
-                    await Board.findOneAndUpdate({BoardId: req.body.BoardId}, board[0]);
-                    res.json(board[0]);
+                    let currentBoard = board[0];
+                    let task = currentBoard.tasks.find(task => task.taskId == req.body.taskId);
+                    let update ='';
+                    update += '\n*Task Name*: '+task.taskName;
+                    if (req.body.hasOwnProperty('taskName')){
+                        update += ':arrow_right:'+req.body.taskName;
+                        currentBoard.tasks.find(task => task.taskId == req.body.taskId).taskName = req.body.taskName;
+                    }
+                    update += '\n*Task Details*: '+task.taskDetails;
+                    if (req.body.hasOwnProperty('taskDetails')){
+                        update += ':arrow_right:'+req.body.taskDetails;
+                        currentBoard.tasks.find(task => task.taskId == req.body.taskId).taskDetails = req.body.taskDetails;
+                    }
+                    update += '\n*status*: '+task.status;
+                    if (req.body.hasOwnProperty('status')) {
+                        update += ':arrow_right:'+req.body.status;
+                        currentBoard.tasks.find(task => task.taskId == req.body.taskId).status = req.body.status;
+                    }
+                    update += '\n*priority*: '+task.priority;
+                    if (req.body.hasOwnProperty('priority')){
+                        update += ':arrow_right:'+req.body.priority;
+                        currentBoard.tasks.find(task => task.taskId == req.body.taskId).priority = req.body.priority;
+                    }
+                    update += '\n*assignee*: '+task.assignee;
+                    if (req.body.hasOwnProperty('assignee')) {
+                        update += ':arrow_right:'+req.body.assignee;
+                        currentBoard.tasks.find(task => task.taskId == req.body.taskId).assignee = req.body.assignee;
+                    }
+                    update += '\n*type*: '+task.type;
+                    if (req.body.hasOwnProperty('type')){
+                        update += ':arrow_right:'+req.body.type;
+                        currentBoard.tasks.find(task => task.taskId == req.body.taskId).type = req.body.type;
+                    }
+                    let message = `${req.session.userName} updated task "${task.taskName}" on board "${currentBoard.boardName}"`;
+                    await Board.findOneAndUpdate({boardId: req.body.boardId}, board[0]);
+                    await notifySlack(message+update);
+                    logger.log(message);
+                    res.send(message);
                 }
             })
             .catch(err => {
-                console.log(`Error getting data from DB:${err}`)
+                logger.log(`Error getting data from DB:${err}`)
             });
+    },
+    //Export specific board into CSV and download it
+    async exportBoardToCSV(req,res) {
+        await Board.find({boardId: req.params.id}).exec()
+            .then(board => {
+
+                if(board.length == 1) {
+                    try {
+                        let currentBoard = board[0]
+                        let csv   = json2csvParser.parse(currentBoard.tasks);
+                        fs.writeFileSync(currentBoard.boardName + '-board tasks.csv', csv, function(err) {
+                            if(err) {
+                                throw err;
+                            }
+                        });
+                        logger.log("exportBoardToCSV");
+                        res.attachment(currentBoard.boardName + "-board tasks.csv");
+                        res.status(200).send(csv);
+                    } catch (e) {
+                        logger.log("error with csv export");
+                        res.status(400).send("Faild to export board no " + req.params.id + " tasks list to csv. msg:" + e);
+                    }
+                } else {
+                    logger.log("error with csv export");
+                    res.status(400).send("Faild to export board's tasks list to csv.");
+                }
+            });
+    },
+    //Get board statistics of Priority and Status from a specific board:
+    async getBoardStatistics(req, res) {
+        await Board.find({boardId: req.params.id}).exec()
+            .then(board => {
+                if(board.length == 1) {
+                    let currentBoard = board[0];
+                    let tasks = currentBoard.tasks;
+                    let statusTask = [0, 0, 0];  //status[0] = To-Do, status[1] = In Progress, status[2] = Done
+                    let priorityTask = [0, 0, 0]; //prior[0] = Low, prior[1] = Medium, prior[2] = High
+
+                    for (const task of tasks) {
+                        switch (task.status) {
+                            case "To-do":
+                                statusTask[0]++;
+                                break;
+                            case "In-progress":
+                                statusTask[1]++;
+                                break;
+                            case "Done":
+                                statusTask[2]++;
+                                break;
+                            default:
+                                break;
+                        }
+                        switch (task.priority) {
+                            case "Low":
+                                priorityTask[0]++;
+                                break;
+                            case "Medium":
+                                priorityTask[1]++;
+                                break;
+                            case "High":
+                                priorityTask[2]++;
+                                break;
+                            default:
+                                break;
+                        }
+                    }
+
+                    let Charts = [{
+                        type: 'doughnut',
+                        data: {
+                            labels: [
+                                'To-Do',
+                                'In-Progress',
+                                'Done'
+                            ],
+                            datasets: [{
+                                label: 'My First Dataset',
+                                data: [statusTask[0], statusTask[1], statusTask[2]],
+                                backgroundColor: [
+                                    'rgb(255, 99, 132)',
+                                    'rgb(54, 162, 235)',
+                                    'rgb(255, 205, 86)'
+                                ],
+                                hoverOffset: 6
+                            }]
+                        }
+                    },
+                    {
+                        type: 'bar',
+                        data: {
+                            labels: ['Low', 'Medium', 'High'],
+                            datasets: [{
+                                label: '# of Votes',
+                                data: [priorityTask[0], priorityTask[1], priorityTask[2]],
+                                borderWidth: 1
+                            }]
+                        },
+                        options: {
+                            scales: {
+                                y: {
+                                    beginAtZero: true
+                                }
+                            }
+                        }
+                    }]
+                    res.json(Charts);
+                }
+            })
+
     }
 }
-
-// function boardChecks(id) {
-//     const ifExits = boardsRepository.searchBoard(id);
-//     if(ifExits == null) {
-//         return 'Error! boarder no ' + id + ' is not found!';
-//     }
-//     return true;
-// }
-//
-//
-// exports.boardsController = {
-//
-//     getBoards(req, res) {
-//         logger.log("Getting all boards");
-//         res.status(200).json(boardsRepository.getAllBoards());
-//     },
-//
-//     getBoard(req, res) {
-//         const result = boardChecks(req.params.id);
-//         if (result != true) {
-//             res.status(400).send(result);
-//         }
-//         else {
-//             logger.log("getting board no " + req.params.id);
-//             res.status(200).json(boardsRepository.searchBoard(req.params.id));
-//         }
-//     },
-//
-//     updateBord(req, res) {
-//         const result = boardChecks(req.body.id);
-//         if(result !=  true) {
-//             res.status(400).send(msg);
-//         }
-//         else {
-//             boardsRepository.updateBoard(req.body);
-//             logger.log("update a board no " +  req.body.id);
-//             res.status(200).send('Board no ' + req.body.id + ' is updated');
-//         }
-//     },
-//
-//     deleteBoard(req, res) {
-//         const result = boardChecks(req.body.id);
-//         if(result != true) {
-//             res.status(400).send(result);
-//         }
-//         else {
-//             boardsRepository.deleteBoard(req.body);
-//             logger.log("delete a board");
-//             res.status(200).send('Board no ' + req.body.id + ' is deleted');
-//         }
-//     },
-//
-//     createNewBoard(req, res) {
-//         boardsRepository.createNewBoard(req.body);
-//         logger.log("creating a new board");
-//         res.status(200).send('The board is created');
-//     },
-//
-//     createNewTask(req,res) {
-//         const result = boardChecks(req.body.BoardId);
-//         if(result != true) {
-//             res.status(400).send(result);
-//         } else {
-//             boardsRepository.createNewTask(req.body);
-//             logger.log("adding a new task");
-//             res.status(200).send('The task is added to the bord');
-//         }
-//     },
-//
-//     deleteTask(req, res) {
-//         console.log(req.body);
-//         const result = boardChecks(req.body.BoardId);
-//         if(result != true) {
-//             res.status(400).send(result);
-//         } else if(boardsRepository.deleteTask(req.body) == false) {
-//             res.status(400).send('task no ' + req.body.TaskId + ' is not found');
-//         } else {
-//             logger.log('task no ' + req.body.TaskId + ' is deleted');
-//             res.status(200).send('task no ' + req.body.TaskId + ' is deleted');
-//         }
-//     },
-//
-//     updateTask(req,res) {
-//         const result = boardChecks(req.body.BoardId);
-//         if(result != true) {
-//             res.status(400).send(result);
-//         } else {
-//             boardsRepository.updateTask(req.body);
-//             logger.log("updateTask");
-//             res.status(200).send('Tasks no ' + req.body.TaskId + " is edited");
-//         }
-//
-//     },
-//
-//     exportBoardToCSV(req , res) {
-//         const result = boardChecks(req.params.id);
-//         if(result != true) {
-//             res.status(400).send(result);
-//         }
-//         else {
-//             try {
-//                 const csv = boardsRepository.exportToCsv(req.params.id);
-//                 logger.log("exportBoardToCSV");
-//                 res.attachment("tasks.csv");
-//                 res.status(200).send(csv);
-//             } catch (error) {
-//                 logger.log("error");
-//                 res.status(400).send("Faild to export board no " + req.params.id + " tasks list to csv. Error: " + error);
-//             }
-//         }
-//     }
-// }
-

@@ -22,7 +22,7 @@
         <div class="container-fluid wrapper">
             <div class="row">
                 <div class="col">
-                    <a href="boards" class="logo d-flex align-items-center insertemail">
+                    <a href="boards" class="logo d-flex align-items-center">
                         <h2>Task<b>Manager</b></h2>
                     </a>
                 </div>
@@ -34,14 +34,14 @@
                                 <img src="includes/profile.png" alt="user-image" class="rounded-circle">
                             </span>
                             <span>
-                                <span>Dominic Keller</span>
+                                <span id="user_name"></span>
                             </span>
                         </a>
                         <div class="dropdown-menu dropdown-menu-end dropdown-menu-animated">
                             <div class=" dropdown-header noti-title">
                                 <h6 class="text-overflow m-0">Welcome</h6>
                             </div>
-                            <a href="index" class="dropdown-item notify-item">
+                            <a href="/" class="dropdown-item notify-item">
                                 <span><i class="fa-regular fa-right-from-bracket"></i></span>
                                 <span>Logout</span>
                             </a>
@@ -55,7 +55,7 @@
         <div class="container-fluid wrapper">
             <div class="row">
                 <div class="col">
-                    <a href="boards" class="navbar-brand insertemail">Home</a>
+                    <a href="boards" class="navbar-brand">Home</a>
                 </div>
                 <div class="col d-flex justify-content-end align-items-center">
                     <div class="input-group today-date">
@@ -78,7 +78,7 @@
                 <div class="col">
                     <nav class="d-flex align-items-center justify-content-end" aria-label="breadcrumb">
                         <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="boards" class="insertemail">Boards</a></li>
+                            <li class="breadcrumb-item"><a href="boards">Boards</a></li>
                             <li class="breadcrumb-item active" aria-current="page">Tasks</li>
                         </ol>
                     </nav>
@@ -114,7 +114,7 @@
                                             <a href="javascript: void(0);" class="dropdown-item notify-item">
                                                 <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#addtaskmodel">
                                                     <span><i class="fa-regular fa-square-plus m-2"></i></span>
-                                                    <span>Add new board</span>
+                                                    <span>Add new Task</span>
                                                 </button>
                                             </a>
                                             <a href="javascript: void(0);" class="dropdown-item notify-item">
@@ -123,6 +123,12 @@
                                                     <span>Export to csv</span>
                                                 </button>
                                             </a>
+                                            <a href="javascript: void(0);" class="dropdown-item notify-item">
+                                                <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#filtertasksmodel">
+                                                   <span><i class="fa-solid fa-filters m-2"></i></span>
+                                                   <span>Filter tasks</span>
+                                                </button>
+                                                                                        </a>
                                         </div>
                                     </div>
                                 </div>
@@ -131,7 +137,7 @@
                                 <div class="table-wrapper">
                                     <table class="table table-striped table-hover">
                                         <thead>
-                                            <tr>
+                                            <tr id="headers_permissions">
                                                 <th>Id</th>
                                                 <th>Name</th>
                                                 <th>Details</th>
@@ -140,7 +146,6 @@
                                                 <th>Type</th>
                                                 <th>Assignee</th>
                                                 <th>Creator</th>
-                                                <th></th>
                                                 <th></th>
                                             </tr>
                                         </thead>
@@ -155,6 +160,97 @@
             </div>
         </div>
     </main>
+        <div class="modal fade" id="filtertasksmodel" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <form id="filermodel">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Filter the tasks table.</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body p-3">
+                            <div class="form-floating">
+                                <div class="form-check form-switch">
+                                    <input class="form-check-input" id="status_switch" type="checkbox" value="status">
+                                    <label class="form-check-label" for="flexSwitchCheckDefault">Status</label>
+                                </div>
+                                <div class="row m-3" id="status_checks" hidden>
+                                    <div class="col">
+                                        <div class="form-check">
+                                            <input class="form-check-input" id="to-do" type="radio" name="status" value="To-do" checked>
+                                            <label class="form-check-label" for="flexCheckDefault">To-Do</label>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="form-check">
+                                            <input class="form-check-input" id="in-progress" type="radio" name="status" value="In-progress">
+                                            <label class="form-check-label" for="flexCheckDefault">in-progress</label>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="form-check">
+                                            <input class="form-check-input" id="done" type="radio" name="status" value="Done">
+                                            <label class="form-check-label" for="flexCheckDefault">Done</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-check form-switch">
+                                    <input class="form-check-input" id="priority_switch" type="checkbox" value="priority">
+                                    <label class="form-check-label" for="flexSwitchCheckDefault">Priority</label>
+                                </div>
+                                <div class="row m-3" id="priority_checks" hidden>
+                                    <div class="col">
+                                        <div class="form-check">
+                                            <input class="form-check-input" id="low" type="radio" name="priority" value="Low" checked>
+                                            <label class="form-check-label" for="flexCheckDefault">Low</label>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="form-check">
+                                            <input class="form-check-input" id="medium" type="radio" name="priority" value="Medium">
+                                            <label class="form-check-label" for="flexCheckDefault">Medium</label>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="form-check">
+                                            <input class="form-check-input" id="high" type="radio" name="priority" value="High">
+                                            <label class="form-check-label" for="flexCheckDefault">High</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-check form-switch">
+                                    <input class="form-check-input" id="type_switch" type="checkbox" value="type">
+                                    <label class="form-check-label" for="flexSwitchCheckDefault">Type</label>
+                                </div>
+                                <div class="row m-3" id="type_checks" hidden>
+                                    <div class="col">
+                                        <div class="form-check">
+                                            <input class="form-check-input" id="bug" type="radio" name="type" value="Bug" checked>
+                                            <label class="form-check-label" for="flexCheckDefault">Bug</label>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="form-check">
+                                            <input class="form-check-input" id="feature" type="radio" name="type" value="Feature">
+                                            <label class="form-check-label" for="flexCheckDefault">Feature</label>
+                                        </div>
+                                    </div>
+                                    <div class="col"></div>
+                                </div>
+                                <div class="form-floating m-3">
+                                    <input type="email" class="form-control mb-4" id="filterAssignee" placeholder="name" value="">
+                                    <label class="form-label" for="taskassignee_new">Assignee</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                            <button type="submit" class="btn btn-primary">Filter</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
     <div class="modal fade" id="deletetaskmodel" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <form id="deleteboard">
             <div class="modal-dialog">
@@ -182,7 +278,7 @@
                         <h5 class="modal-title">Edit task</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
-                    <div class="modal-body">
+                    <div class="modal-body" id="editinputs">
                         <p id="editmsg"></p>
                         <div class="form-floating">
                             <input type="text" class="form-control mb-4" id="taskname_edit" placeholder="name" required>

@@ -1,133 +1,406 @@
-07-12-22 02:31 -> getting index.ejs
-07-12-22 02:31 -> getting boards.ejs
-07-12-22 02:31 -> Getting all boards
-07-12-22 02:31 -> getting tasks.ejs
-07-12-22 02:31 -> getting board no 1
-07-12-22 02:31 -> getting boards.ejs
-07-12-22 02:31 -> Getting all boards
-07-12-22 02:32 -> update a board no 9
-07-12-22 02:32 -> getting boards.ejs
-07-12-22 02:32 -> Getting all boards
-07-12-22 02:32 -> update a board no 9
-07-12-22 02:32 -> getting boards.ejs
-07-12-22 02:32 -> Getting all boards
-07-12-22 02:32 -> getting tasks.ejs
-07-12-22 02:32 -> getting board no 9
-07-12-22 02:32 -> getting boards.ejs
-07-12-22 02:32 -> Getting all boards
-07-12-22 02:32 -> getting tasks.ejs
-07-12-22 02:32 -> getting board no 9
-07-12-22 02:33 -> adding a new task
-07-12-22 02:33 -> getting tasks.ejs
-07-12-22 02:33 -> getting board no 9
-07-12-22 02:44 -> getting index.ejs
-07-12-22 02:45 -> getting boards.ejs
-07-12-22 02:45 -> getting tasks.ejs
-07-12-22 02:45 -> getting boards.ejs
-07-12-22 02:45 -> getting tasks.ejs
-07-12-22 02:45 -> getting boards.ejs
-07-12-22 02:45 -> getting tasks.ejs
-07-12-22 02:45 -> getting boards.ejs
-07-12-22 02:45 -> getting tasks.ejs
-07-12-22 02:45 -> getting boards.ejs
-07-12-22 02:45 -> getting boards.ejs
-07-12-22 02:45 -> getting boards.ejs
-07-12-22 02:45 -> getting boards.ejs
-07-12-22 02:46 -> getting boards.ejs
-07-12-22 02:46 -> getting boards.ejs
-07-12-22 02:46 -> getting tasks.ejs
-07-12-22 02:46 -> getting boards.ejs
-07-12-22 02:46 -> getting tasks.ejs
-07-12-22 02:47 -> getting boards.ejs
-07-12-22 02:47 -> getting tasks.ejs
-07-12-22 02:47 -> getting boards.ejs
-07-12-22 02:47 -> getting tasks.ejs
-07-12-22 02:47 -> getting boards.ejs
-07-12-22 02:47 -> getting tasks.ejs
-07-12-22 02:47 -> getting boards.ejs
-07-12-22 02:47 -> getting tasks.ejs
-07-12-22 02:47 -> getting boards.ejs
-07-12-22 02:47 -> getting tasks.ejs
-07-12-22 02:49 -> getting boards.ejs
-07-12-22 02:52 -> getting boards.ejs
-07-12-22 02:52 -> getting boards.ejs
-07-12-22 02:52 -> getting tasks.ejs
-07-12-22 02:53 -> getting tasks.ejs
-07-12-22 02:53 -> getting tasks.ejs
-07-12-22 02:55 -> getting tasks.ejs
-07-12-22 02:55 -> getting boards.ejs
-07-12-22 02:55 -> getting tasks.ejs
-07-12-22 02:55 -> getting boards.ejs
-07-12-22 02:55 -> getting boards.ejs
-07-12-22 02:55 -> getting tasks.ejs
-07-12-22 02:55 -> getting tasks.ejs
-07-12-22 02:58 -> getting tasks.ejs
-07-12-22 02:59 -> getting tasks.ejs
-07-12-22 03:03 -> getting tasks.ejs
-07-12-22 03:03 -> getting tasks.ejs
-07-12-22 03:03 -> getting tasks.ejs
-07-12-22 03:03 -> getting tasks.ejs
-07-12-22 03:06 -> getting tasks.ejs
-07-12-22 03:07 -> getting tasks.ejs
-07-12-22 03:07 -> getting tasks.ejs
-07-12-22 03:08 -> getting tasks.ejs
-07-12-22 03:08 -> getting tasks.ejs
-07-12-22 03:12 -> getting tasks.ejs
-07-12-22 03:12 -> getting tasks.ejs
-07-12-22 03:13 -> getting tasks.ejs
-07-12-22 03:15 -> getting boards.ejs
-07-12-22 03:15 -> getting boards.ejs
-07-12-22 03:15 -> getting boards.ejs
-07-12-22 03:15 -> getting boards.ejs
-07-12-22 03:16 -> getting tasks.ejs
-07-12-22 03:16 -> getting boards.ejs
-07-12-22 03:17 -> getting boards.ejs
-07-12-22 03:17 -> getting boards.ejs
-07-12-22 03:20 -> getting boards.ejs
-07-12-22 03:20 -> getting boards.ejs
-07-12-22 03:20 -> getting boards.ejs
-07-12-22 03:21 -> getting boards.ejs
-07-12-22 03:21 -> getting tasks.ejs
-07-12-22 03:21 -> getting tasks.ejs
-07-12-22 03:22 -> getting boards.ejs
-07-12-22 03:27 -> getting boards.ejs
-07-12-22 03:28 -> getting boards.ejs
-07-12-22 03:28 -> getting boards.ejs
-07-12-22 03:28 -> getting boards.ejs
-07-12-22 03:29 -> getting boards.ejs
-07-12-22 03:29 -> getting boards.ejs
-07-12-22 03:29 -> getting boards.ejs
-07-12-22 03:29 -> getting boards.ejs
-07-12-22 03:31 -> getting boards.ejs
-07-12-22 03:31 -> getting boards.ejs
-07-12-22 03:31 -> getting boards.ejs
-07-12-22 03:31 -> getting boards.ejs
-07-12-22 03:31 -> getting tasks.ejs
-07-12-22 03:32 -> getting tasks.ejs
-07-12-22 03:32 -> getting tasks.ejs
-07-12-22 03:32 -> getting tasks.ejs
-07-12-22 03:32 -> getting boards.ejs
-07-12-22 03:33 -> getting boards.ejs
-07-12-22 03:33 -> getting tasks.ejs
-07-12-22 03:33 -> getting boards.ejs
-07-12-22 03:33 -> getting tasks.ejs
-07-12-22 03:33 -> getting tasks.ejs
-07-12-22 03:34 -> getting tasks.ejs
-07-12-22 03:40 -> getting boards.ejs
-07-12-22 03:40 -> getting tasks.ejs
-07-12-22 03:41 -> getting boards.ejs
-07-12-22 03:41 -> getting boards.ejs
-07-12-22 03:41 -> getting boards.ejs
-07-12-22 03:41 -> getting tasks.ejs
-07-12-22 03:41 -> getting tasks.ejs
-07-12-22 03:43 -> getting index.ejs
-07-12-22 03:43 -> getting boards.ejs
-07-12-22 03:43 -> getting tasks.ejs
-07-12-22 03:43 -> getting tasks.ejs
-07-12-22 03:47 -> getting boards.ejs
-07-12-22 03:53 -> getting tasks.ejs
-07-12-22 03:53 -> getting tasks.ejs
-07-12-22 03:54 -> getting tasks.ejs
-07-12-22 04:08 -> getting tasks.ejs
-07-12-22 04:08 -> getting boards.ejs
-07-12-22 04:08 -> getting tasks.ejs
+09-12-22 02:22 -> getting index.ejs
+09-12-22 02:23 -> getting boards.ejs
+09-12-22 02:27 -> getting index.ejs
+09-12-22 02:27 -> getting boards.ejs
+09-12-22 02:27 -> getting tasks.ejs
+09-12-22 02:27 -> getting tasks.ejs
+09-12-22 02:27 -> VikiBril attempted to delete task "as" in board "Google"
+09-12-22 02:27 -> getting index.ejs
+09-12-22 02:27 -> getting boards.ejs
+09-12-22 02:28 -> getting tasks.ejs
+09-12-22 02:28 -> getting tasks.ejs
+09-12-22 02:28 -> Task "as" on board "Google" has been deleted by YovelGavrieli
+09-12-22 02:57 -> getting index.ejs
+09-12-22 02:58 -> getting index.ejs
+09-12-22 03:01 -> getting index.ejs
+09-12-22 03:03 -> getting boards.ejs
+09-12-22 03:03 -> getting boards.ejs
+09-12-22 03:05 -> getting boards.ejs
+09-12-22 03:05 -> getting tasks.ejs
+09-12-22 03:06 -> getting tasks.ejs
+09-12-22 03:09 -> getting tasks.ejs
+09-12-22 03:09 -> getting tasks.ejs
+09-12-22 03:09 -> getting tasks.ejs
+09-12-22 03:09 -> getting tasks.ejs
+09-12-22 03:10 -> getting index.ejs
+09-12-22 03:10 -> getting boards.ejs
+09-12-22 03:10 -> getting tasks.ejs
+09-12-22 03:10 -> getting tasks.ejs
+09-12-22 03:14 -> getting tasks.ejs
+09-12-22 03:14 -> getting boards.ejs
+09-12-22 03:14 -> getting boards.ejs
+09-12-22 03:14 -> getting index.ejs
+09-12-22 03:14 -> getting boards.ejs
+09-12-22 03:14 -> getting tasks.ejs
+09-12-22 03:15 -> getting tasks.ejs
+09-12-22 03:15 -> getting tasks.ejs
+09-12-22 03:15 -> getting tasks.ejs
+09-12-22 03:17 -> getting tasks.ejs
+09-12-22 03:17 -> getting tasks.ejs
+09-12-22 03:17 -> getting tasks.ejs
+09-12-22 03:17 -> getting tasks.ejs
+09-12-22 03:18 -> getting tasks.ejs
+09-12-22 03:19 -> getting tasks.ejs
+09-12-22 03:20 -> getting tasks.ejs
+09-12-22 03:20 -> getting tasks.ejs
+09-12-22 03:21 -> getting tasks.ejs
+09-12-22 03:21 -> undefined updated task "asdasd" on board "Backend"
+09-12-22 03:21 -> getting boards.ejs
+09-12-22 03:21 -> getting boards.ejs
+09-12-22 03:21 -> getting tasks.ejs
+09-12-22 03:21 -> getting tasks.ejs
+09-12-22 03:21 -> getting boards.ejs
+09-12-22 03:22 -> getting index.ejs
+09-12-22 03:24 -> getting boards.ejs
+09-12-22 03:24 -> getting boards.ejs
+09-12-22 03:25 -> getting boards.ejs
+09-12-22 03:25 -> getting index.ejs
+09-12-22 03:27 -> getting boards.ejs
+09-12-22 03:27 -> getting index.ejs
+09-12-22 03:28 -> getting index.ejs
+09-12-22 03:29 -> getting index.ejs
+09-12-22 03:30 -> getting index.ejs
+09-12-22 03:32 -> getting index.ejs
+09-12-22 03:33 -> getting index.ejs
+09-12-22 03:33 -> getting index.ejs
+09-12-22 03:33 -> getting index.ejs
+09-12-22 03:35 -> getting index.ejs
+09-12-22 03:35 -> getting index.ejs
+09-12-22 03:35 -> getting index.ejs
+09-12-22 03:36 -> getting index.ejs
+09-12-22 03:36 -> getting index.ejs
+09-12-22 03:36 -> getting index.ejs
+09-12-22 03:36 -> getting index.ejs
+09-12-22 03:36 -> getting index.ejs
+09-12-22 03:38 -> getting index.ejs
+09-12-22 03:38 -> getting index.ejs
+09-12-22 03:39 -> getting index.ejs
+09-12-22 03:43 -> getting index.ejs
+09-12-22 03:43 -> getting index.ejs
+09-12-22 03:43 -> getting index.ejs
+09-12-22 03:45 -> getting index.ejs
+09-12-22 03:45 -> getting index.ejs
+09-12-22 03:46 -> getting index.ejs
+09-12-22 03:46 -> getting index.ejs
+09-12-22 03:49 -> getting tasks.ejs
+09-12-22 03:49 -> getting index.ejs
+09-12-22 03:51 -> getting index.ejs
+09-12-22 03:52 -> getting index.ejs
+09-12-22 03:53 -> getting index.ejs
+09-12-22 03:55 -> getting index.ejs
+09-12-22 03:55 -> getting boards.ejs
+09-12-22 03:55 -> getting index.ejs
+09-12-22 03:57 -> getting index.ejs
+09-12-22 03:57 -> getting index.ejs
+09-12-22 03:57 -> getting index.ejs
+09-12-22 03:58 -> getting index.ejs
+09-12-22 03:58 -> getting boards.ejs
+09-12-22 03:59 -> getting boards.ejs
+09-12-22 04:03 -> getting index.ejs
+09-12-22 04:03 -> getting boards.ejs
+09-12-22 04:03 -> VikiBril attempted to delete board number 1
+09-12-22 04:03 -> getting boards.ejs
+09-12-22 04:03 -> getting tasks.ejs
+09-12-22 04:03 -> getting tasks.ejs
+09-12-22 04:04 -> getting index.ejs
+09-12-22 04:04 -> getting boards.ejs
+09-12-22 04:05 -> getting tasks.ejs
+09-12-22 04:05 -> getting tasks.ejs
+09-12-22 04:05 -> getting boards.ejs
+09-12-22 04:05 -> getting boards.ejs
+09-12-22 04:08 -> getting boards.ejs
+09-12-22 04:09 -> getting boards.ejs
+09-12-22 04:09 -> getting tasks.ejs
+09-12-22 04:09 -> getting tasks.ejs
+09-12-22 04:11 -> getting boards.ejs
+09-12-22 04:11 -> getting tasks.ejs
+09-12-22 04:25 -> getting index.ejs
+09-12-22 04:25 -> getting boards.ejs
+09-12-22 04:34 -> getting boards.ejs
+09-12-22 04:34 -> getting boards.ejs
+09-12-22 04:34 -> getting tasks.ejs
+09-12-22 04:34 -> getting boards.ejs
+09-12-22 04:34 -> getting tasks.ejs
+09-12-22 04:34 -> getting tasks.ejs
+09-12-22 04:35 -> getting boards.ejs
+09-12-22 04:35 -> getting boards.ejs
+09-12-22 04:35 -> undefined attempted to delete board number 3
+09-12-22 04:35 -> getting boards.ejs
+09-12-22 04:41 -> getting boards.ejs
+09-12-22 04:41 -> getting index.ejs
+09-12-22 04:41 -> getting boards.ejs
+09-12-22 04:41 -> getting tasks.ejs
+09-12-22 04:41 -> getting tasks.ejs
+09-12-22 04:42 -> getting tasks.ejs
+09-12-22 04:42 -> getting tasks.ejs
+09-12-22 04:45 -> getting index.ejs
+09-12-22 04:45 -> getting boards.ejs
+09-12-22 04:45 -> getting tasks.ejs
+09-12-22 04:45 -> getting tasks.ejs
+09-12-22 04:45 -> TaskId "undefined" on board "asd" has been deleted by YovelGavrieli
+09-12-22 04:45 -> getting tasks.ejs
+09-12-22 04:47 -> getting index.ejs
+09-12-22 04:47 -> getting boards.ejs
+09-12-22 04:47 -> getting tasks.ejs
+09-12-22 04:47 -> getting tasks.ejs
+09-12-22 04:47 -> TaskId "undefined" on board "asd" has been deleted by YovelGavrieli
+09-12-22 04:48 -> getting index.ejs
+09-12-22 04:48 -> getting boards.ejs
+09-12-22 04:48 -> getting tasks.ejs
+09-12-22 04:48 -> getting tasks.ejs
+09-12-22 04:48 -> TaskId "undefined" on board "asd" has been deleted by YovelGavrieli
+09-12-22 04:51 -> getting boards.ejs
+09-12-22 04:51 -> getting index.ejs
+09-12-22 04:51 -> getting boards.ejs
+09-12-22 04:52 -> getting boards.ejs
+09-12-22 04:52 -> getting index.ejs
+09-12-22 04:52 -> getting boards.ejs
+09-12-22 04:52 -> getting tasks.ejs
+09-12-22 04:52 -> getting tasks.ejs
+09-12-22 04:52 -> TaskId "asda" on board "asd" has been deleted by YovelGavrieli
+09-12-22 04:52 -> getting boards.ejs
+09-12-22 04:52 -> getting tasks.ejs
+09-12-22 04:56 -> getting boards.ejs
+09-12-22 04:56 -> getting index.ejs
+09-12-22 04:58 -> getting boards.ejs
+09-12-22 04:58 -> getting index.ejs
+09-12-22 04:58 -> getting boards.ejs
+09-12-22 05:00 -> getting index.ejs
+09-12-22 05:00 -> getting boards.ejs
+09-12-22 05:00 -> getting tasks.ejs
+09-12-22 05:00 -> getting tasks.ejs
+09-12-22 05:01 -> getting tasks.ejs
+09-12-22 05:01 -> TaskId "asdasd" on board "asd" has been deleted by YovelGavrieli
+09-12-22 05:02 -> getting tasks.ejs
+09-12-22 05:02 -> getting index.ejs
+09-12-22 05:02 -> getting boards.ejs
+09-12-22 05:02 -> getting tasks.ejs
+09-12-22 05:16 -> getting index.ejs
+09-12-22 05:17 -> getting boards.ejs
+09-12-22 05:17 -> getting tasks.ejs
+09-12-22 05:18 -> getting index.ejs
+09-12-22 05:18 -> getting boards.ejs
+09-12-22 05:18 -> getting tasks.ejs
+09-12-22 05:18 -> exportBoardToCSV
+09-12-22 05:18 -> getting boards.ejs
+09-12-22 05:18 -> getting tasks.ejs
+09-12-22 05:18 -> exportBoardToCSV
+09-12-22 05:19 -> getting boards.ejs
+09-12-22 05:28 -> getting index.ejs
+09-12-22 05:29 -> getting index.ejs
+09-12-22 05:29 -> getting boards.ejs
+09-12-22 05:29 -> getting boards.ejs
+09-12-22 05:29 -> getting boards.ejs
+09-12-22 05:29 -> Board "asd" deleted by YovelGavrieli
+09-12-22 05:29 -> getting boards.ejs
+09-12-22 05:29 -> VikiBril attempted to delete board number 2
+09-12-22 05:29 -> getting boards.ejs
+09-12-22 05:29 -> getting tasks.ejs
+09-12-22 05:29 -> getting boards.ejs
+09-12-22 05:52 -> getting index.ejs
+09-12-22 05:52 -> getting boards.ejs
+09-12-22 05:57 -> getting boards.ejs
+09-12-22 05:58 -> getting index.ejs
+09-12-22 05:58 -> getting boards.ejs
+09-12-22 06:02 -> getting index.ejs
+09-12-22 06:02 -> getting boards.ejs
+09-12-22 06:02 -> getting boards.ejs
+09-12-22 06:04 -> getting index.ejs
+09-12-22 06:04 -> getting boards.ejs
+09-12-22 06:04 -> getting tasks.ejs
+09-12-22 06:04 -> getting boards.ejs
+09-12-22 06:04 -> getting tasks.ejs
+09-12-22 06:04 -> getting boards.ejs
+09-12-22 06:05 -> getting index.ejs
+09-12-22 06:05 -> getting boards.ejs
+09-12-22 06:05 -> getting tasks.ejs
+09-12-22 06:05 -> getting boards.ejs
+09-12-22 06:05 -> getting boards.ejs
+09-12-22 06:10 -> getting index.ejs
+09-12-22 06:10 -> getting boards.ejs
+09-12-22 06:10 -> getting index.ejs
+09-12-22 06:10 -> getting boards.ejs
+09-12-22 06:10 -> getting tasks.ejs
+09-12-22 06:10 -> getting boards.ejs
+09-12-22 06:10 -> getting tasks.ejs
+09-12-22 06:10 -> getting boards.ejs
+09-12-22 06:12 -> getting index.ejs
+09-12-22 06:12 -> getting boards.ejs
+09-12-22 06:13 -> getting tasks.ejs
+09-12-22 06:13 -> getting tasks.ejs
+09-12-22 06:13 -> TaskId "asd" on board "Backend" has been deleted by YovelGavrieli
+09-12-22 06:13 -> getting tasks.ejs
+09-12-22 06:13 -> TaskId "asdasd" on board "Backend" has been deleted by YovelGavrieli
+09-12-22 06:13 -> getting tasks.ejs
+09-12-22 06:13 -> getting boards.ejs
+09-12-22 06:13 -> getting index.ejs
+09-12-22 06:14 -> getting boards.ejs
+09-12-22 06:14 -> getting tasks.ejs
+09-12-22 06:14 -> getting boards.ejs
+09-12-22 06:15 -> getting boards.ejs
+09-12-22 06:16 -> getting index.ejs
+09-12-22 06:16 -> getting boards.ejs
+09-12-22 06:16 -> getting tasks.ejs
+09-12-22 06:16 -> getting index.ejs
+09-12-22 06:16 -> getting boards.ejs
+09-12-22 06:16 -> getting tasks.ejs
+09-12-22 06:23 -> getting index.ejs
+09-12-22 06:23 -> getting boards.ejs
+09-12-22 06:23 -> getting tasks.ejs
+09-12-22 06:25 -> getting index.ejs
+09-12-22 06:25 -> getting boards.ejs
+09-12-22 06:25 -> getting tasks.ejs
+09-12-22 06:26 -> getting index.ejs
+09-12-22 06:26 -> getting boards.ejs
+09-12-22 06:26 -> getting tasks.ejs
+09-12-22 06:28 -> getting index.ejs
+09-12-22 06:28 -> getting boards.ejs
+09-12-22 06:28 -> getting tasks.ejs
+09-12-22 06:29 -> getting index.ejs
+09-12-22 06:29 -> getting boards.ejs
+09-12-22 06:29 -> getting tasks.ejs
+09-12-22 06:30 -> getting index.ejs
+09-12-22 06:30 -> getting boards.ejs
+09-12-22 06:30 -> getting tasks.ejs
+10-12-22 03:53 -> getting index.ejs
+10-12-22 03:55 -> getting index.ejs
+10-12-22 04:00 -> getting index.ejs
+10-12-22 04:00 -> getting boards.ejs
+10-12-22 04:00 -> getting tasks.ejs
+10-12-22 04:00 -> getting boards.ejs
+10-12-22 04:00 -> getting boards.ejs
+10-12-22 04:00 -> getting boards.ejs
+10-12-22 04:00 -> getting boards.ejs
+10-12-22 04:00 -> getting tasks.ejs
+10-12-22 04:00 -> getting boards.ejs
+10-12-22 04:00 -> getting tasks.ejs
+10-12-22 04:01 -> getting boards.ejs
+10-12-22 04:01 -> getting tasks.ejs
+10-12-22 04:02 -> getting index.ejs
+10-12-22 04:02 -> getting boards.ejs
+10-12-22 04:02 -> getting tasks.ejs
+10-12-22 04:02 -> getting boards.ejs
+10-12-22 04:06 -> getting index.ejs
+10-12-22 04:06 -> getting boards.ejs
+10-12-22 04:06 -> getting tasks.ejs
+10-12-22 04:06 -> getting boards.ejs
+10-12-22 04:07 -> getting index.ejs
+10-12-22 04:07 -> getting boards.ejs
+10-12-22 04:08 -> getting index.ejs
+10-12-22 04:08 -> getting boards.ejs
+10-12-22 04:09 -> getting index.ejs
+10-12-22 04:09 -> getting boards.ejs
+10-12-22 04:22 -> getting index.ejs
+10-12-22 04:22 -> getting boards.ejs
+10-12-22 04:22 -> getting boards.ejs
+10-12-22 04:22 -> getting index.ejs
+10-12-22 04:23 -> getting boards.ejs
+10-12-22 04:23 -> getting boards.ejs
+10-12-22 04:23 -> Board "Backend" is now called "R&D"
+10-12-22 04:23 -> getting index.ejs
+10-12-22 04:23 -> getting boards.ejs
+10-12-22 04:23 -> getting tasks.ejs
+10-12-22 04:24 -> getting boards.ejs
+10-12-22 04:24 -> getting boards.ejs
+10-12-22 04:24 -> Board "R&D" is now called "Backend"
+10-12-22 04:24 -> getting index.ejs
+10-12-22 04:25 -> getting boards.ejs
+10-12-22 04:25 -> getting tasks.ejs
+10-12-22 04:25 -> getting boards.ejs
+10-12-22 04:28 -> getting index.ejs
+10-12-22 04:28 -> getting boards.ejs
+10-12-22 04:28 -> getting tasks.ejs
+10-12-22 04:28 -> getting boards.ejs
+10-12-22 04:28 -> getting tasks.ejs
+10-12-22 04:28 -> getting boards.ejs
+10-12-22 04:54 -> successfully connected to mongoDB
+10-12-22 05:03 -> successfully connected to mongoDB
+10-12-22 05:03 -> getting index.ejs
+10-12-22 05:03 -> yovel@coreteam.com logged in successfully
+10-12-22 05:03 -> getting boards.ejs
+10-12-22 05:03 -> getting tasks.ejs
+10-12-22 05:04 -> successfully connected to mongoDB
+10-12-22 05:04 -> getting index.ejs
+10-12-22 05:04 -> yovel@coreteam.com logged in successfully
+10-12-22 05:04 -> getting boards.ejs
+10-12-22 05:04 -> getting tasks.ejs
+10-12-22 05:06 -> successfully connected to mongoDB
+10-12-22 05:06 -> getting index.ejs
+10-12-22 05:06 -> yovel@coreteam.com logged in successfully
+10-12-22 05:06 -> getting boards.ejs
+10-12-22 05:06 -> getting tasks.ejs
+10-12-22 05:07 -> getting tasks.ejs
+10-12-22 07:22 -> successfully connected to mongoDB
+10-12-22 07:25 -> successfully connected to mongoDB
+10-12-22 07:25 -> successfully connected to mongoDB
+10-12-22 07:29 -> getting index.ejs
+10-12-22 07:29 -> yovel@coreteam.com logged in successfully
+10-12-22 07:29 -> getting boards.ejs
+10-12-22 07:29 -> getting tasks.ejs
+10-12-22 07:31 -> getting tasks.ejs
+10-12-22 07:32 -> successfully connected to mongoDB
+10-12-22 07:32 -> getting index.ejs
+10-12-22 07:32 -> yovel@coreteam.com logged in successfully
+10-12-22 07:32 -> getting boards.ejs
+10-12-22 07:32 -> getting tasks.ejs
+10-12-22 07:33 -> successfully connected to mongoDB
+10-12-22 07:37 -> successfully connected to mongoDB
+10-12-22 07:37 -> successfully connected to mongoDB
+10-12-22 07:39 -> successfully connected to mongoDB
+10-12-22 07:40 -> successfully connected to mongoDB
+10-12-22 07:40 -> successfully connected to mongoDB
+10-12-22 07:40 -> getting index.ejs
+10-12-22 07:40 -> yovel@coreteam.com logged in successfully
+10-12-22 07:40 -> getting boards.ejs
+10-12-22 07:40 -> getting tasks.ejs
+10-12-22 07:41 -> successfully connected to mongoDB
+10-12-22 07:41 -> getting index.ejs
+10-12-22 07:41 -> yovel@coreteam.com logged in successfully
+10-12-22 07:41 -> getting boards.ejs
+10-12-22 07:41 -> getting tasks.ejs
+10-12-22 07:41 -> exportBoardToCSV
+10-12-22 07:41 -> filterBoardByParameters on Backend
+10-12-22 07:41 -> filterBoardByParameters on Backend
+10-12-22 07:42 -> filterBoardByParameters on Backend
+10-12-22 07:42 -> filterBoardByParameters on Backend
+10-12-22 07:43 -> filterBoardByParameters on Backend
+10-12-22 07:43 -> filterBoardByParameters on Backend
+10-12-22 07:43 -> filterBoardByParameters on Backend
+10-12-22 07:43 -> successfully connected to mongoDB
+10-12-22 07:46 -> successfully connected to mongoDB
+10-12-22 07:48 -> getting index.ejs
+10-12-22 07:48 -> yovel@coreteam.com logged in successfully
+10-12-22 07:48 -> getting boards.ejs
+10-12-22 07:48 -> getting tasks.ejs
+10-12-22 07:49 -> getting tasks.ejs
+10-12-22 07:49 -> YovelGavrieli updated task "Server" on board "Backend"
+10-12-22 07:49 -> filterBoardByParameters on Backend
+10-12-22 07:49 -> filterBoardByParameters on Backend
+10-12-22 07:50 -> filterBoardByParameters on Backend
+10-12-22 07:50 -> filterBoardByParameters on Backend
+10-12-22 07:51 -> getting boards.ejs
+10-12-22 07:51 -> getting tasks.ejs
+10-12-22 07:51 -> getting boards.ejs
+10-12-22 07:51 -> getting tasks.ejs
+10-12-22 07:51 -> getting tasks.ejs
+10-12-22 07:51 -> YovelGavrieli updated task "Server" on board "Backend"
+10-12-22 07:53 -> exportBoardToCSV
+10-12-22 07:54 -> getting index.ejs
+10-12-22 07:54 -> viki@coreteam.com logged in successfully
+10-12-22 07:54 -> getting boards.ejs
+10-12-22 07:54 -> getting tasks.ejs
+10-12-22 07:55 -> getting boards.ejs
+10-12-22 07:55 -> getting boards.ejs
+10-12-22 07:55 -> getting tasks.ejs
+10-12-22 07:55 -> exportBoardToCSV
+10-12-22 07:55 -> getting boards.ejs
+10-12-22 07:55 -> getting boards.ejs
+10-12-22 07:55 -> getting index.ejs
+10-12-22 07:55 -> yovel@coreteam.com logged in successfully
+10-12-22 07:55 -> getting boards.ejs
+10-12-22 07:55 -> getting boards.ejs
+10-12-22 07:55 -> Board "aaa" deleted by YovelGavrieli
+10-12-22 08:08 -> successfully connected to mongoDB
+10-12-22 08:09 -> successfully connected to mongoDB
+10-12-22 08:13 -> successfully connected to mongoDB
+10-12-22 08:15 -> successfully connected to mongoDB
