@@ -18,7 +18,7 @@ window.onload = () => {
             },
             body: JSON.stringify(user)
         };
-        fetch("https://core-team.onrender.com/api/session/login", requestOptions)
+        fetch("http://localhost:3030/api/session/login", requestOptions)
             .then(async response => {
                 const res = await response.text();
                 if (res == "Success") {

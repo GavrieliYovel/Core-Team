@@ -96,7 +96,7 @@ function setUser(user) {
 }
 
 function insertUser() {
-    fetch("https://core-team.onrender.com/api/session/checkUser")
+    fetch("http://localhost:3030/api/session/checkUser")
         .then(response => response.json())
         .then(user => {
             console.log(user);
@@ -132,7 +132,7 @@ function closeModel(model) {
 
 function insertTable() {
 
-    fetch("https://core-team.onrender.com/api/boards")
+    fetch("http://localhost:3030/api/boards")
     .then(response => response.json())
     .then(boards => {
         for (const key in boards) {
@@ -169,17 +169,17 @@ function insertTable() {
 };
 
 function removeBoard(requestOptions) {
-    fetch("https://core-team.onrender.com/api/boards/", requestOptions)
+    fetch("http://localhost:3030/api/boards/", requestOptions)
     .then(response => response.text());
 }
 
 function createBoard(requestOptions) {
-    fetch("https://core-team.onrender.com/api/boards", requestOptions)
+    fetch("http://localhost:3030/api/boards", requestOptions)
     .then(response => response.text());
 
 }
 
 function updateBoard(requestOptions) {
-    fetch("https://core-team.onrender.com/api/boards", requestOptions)
+    fetch("http://localhost:3030/api/boards", requestOptions)
     .then(response => response.text());
 }

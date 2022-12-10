@@ -2,6 +2,7 @@ const {Board,Task} = require('../models/board');
 const { IncomingWebhook } = require('@slack/webhook');
 const Logger = require('../logger/Logger');
 const logger = new Logger();
+require('dotenv').config();
 const fs = require('fs');
 const { Parser } = require('json2csv');
 const webhook = new IncomingWebhook(process.env.SLACK_WEBHOOK_URL);
