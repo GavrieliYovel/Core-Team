@@ -107,7 +107,7 @@ exports.boardDbController = {
                         let message = `Board "${oldName}" is now called "${currentBoard.boardName}"`;
                         await notifySlack(message);
                         logger.log(message);
-                        res.send(result);
+                        res.send(message);
                     } else {
                         res.status(404).send(`Error update boardId ${req.body.boardId}`);
                     }
