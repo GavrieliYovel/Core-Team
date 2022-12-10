@@ -294,7 +294,7 @@ function setUser(user) {
 }
 
 function insertUser() {
-    fetch(process.env.LOCAL_PATH + "/api/session/checkUser")
+    fetch("https://core-team.onrender.com/api/session/checkUser")
         .then(response => response.json())
         .then(user => {
             setUser(user);
@@ -339,14 +339,14 @@ function loadTable(board) {
 
 
 function insertTable() {
-    fetch( process.env.LOCAL_PATH + "/api/boards/" + currentBoardId)
+    fetch("https://core-team.onrender.com/api/boards/" + currentBoardId)
         .then(response => response.json())
         .then(board => {
             loadTable(board);
         });
 }
 function createTasks(requestOptions) {
-    fetch( process.env.LOCAL_PATH + "/api/boards/tasks", requestOptions)
+    fetch("https://core-team.onrender.com/api/boards/tasks", requestOptions)
     .then(response => response.text())
         .then(result => {
             alert(result);
@@ -354,7 +354,7 @@ function createTasks(requestOptions) {
         });
 }
 function updateTask(requestOptions) {
-    fetch( process.env.LOCAL_PATH + "/api/boards/tasks", requestOptions)
+    fetch("https://core-team.onrender.com/api/boards/tasks", requestOptions)
     .then(response => response.text()
         .then(result => {
             alert(result);
@@ -362,7 +362,7 @@ function updateTask(requestOptions) {
         }));
 }
 function removeTask(requestOptions) {
-    fetch( process.env.LOCAL_PATH + "/api/boards/tasks", requestOptions)
+    fetch("https://core-team.onrender.com/api/boards/tasks", requestOptions)
     .then(response => response.text())
         .then(result => {
             alert(result);
@@ -371,11 +371,11 @@ function removeTask(requestOptions) {
 }
 
 function conTocsv() {
-  window.open( process.env.LOCAL_PATH + "/api/boards/csv/" + currentBoardId, '_blank');
+  window.open("https://core-team.onrender.com/api/boards/csv/" + currentBoardId, '_blank');
 }
 
 function instrCharts() {
-    fetch( process.env.LOCAL_PATH + "/api/boards/statistics/" + currentBoardId)
+    fetch("https://core-team.onrender.com/api/boards/statistics/" + currentBoardId)
         .then(response => response.json())
         .then(chars => {
             new Chart(doughnut, chars[0]);
@@ -385,7 +385,7 @@ function instrCharts() {
 }
 
 function filterTasks(requestOptions) {
-    fetch(process.env.LOCAL_PATH + "/api/boards/tasks/filter", requestOptions)
+    fetch("https://core-team.onrender.com/api/boards/tasks/filter", requestOptions)
         .then(response => response.json())
         .then(board => {
             loadTable(board);
